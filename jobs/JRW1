@@ -1,0 +1,125 @@
+#!/bin/bash 
+
+set -xa
+date
+
+
+# #### 01/19/00 ###############################
+# SETUP RAW HRLY PROCESSING VARIABLES
+# #############################################
+
+####################################
+# obtain unique process id (pid) and make temp directory
+####################################
+export pid=$$
+
+####################################
+# Determine Job Output Name on System
+####################################
+export outid="$job"
+export jobid="${outid}.o${pid}"
+export pgmout="OUTPUT.${pid}"
+export pgmerr=errfile
+
+export DATA=${DATAROOT:?}/${jobid:?}
+export TMPDIR=$DATA
+mkdir -p $DATA
+
+cd $DATA
+
+export cyc=${cyc:-${cyc}}
+export cycle=t${cyc}z
+
+####################################
+# Specify NET and RUN Name and model
+####################################
+export NET=${NET:-sfcship}
+export RUN=${RUN:-sfcship}
+export krun=${krun:-1}
+
+####################################
+# File To Log Msgs
+####################################
+export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
+
+####################################
+# SENDCOM  - Copy Files From TMPDIR to $comout
+####################################
+export SENDCOM=${SENDCOM:-YES}
+export SENDDBN=${SENDDBN:-YES}
+export SENDECF=${SENDECF:-YES}
+
+####################################
+# Specify Execution Areas
+####################################
+export HOMEsfcship=${HOMEsfcship:-${NWROOT}/sfcship.${sfcship_ver}}
+export EXECsfcship=${HOMEsfcship}/exec
+
+export HOMEgraph=${HOMEsfcship}/util
+export EXECgraph=$HOMEgraph/exec
+export PARMgraph=$HOMEgraph/parm
+export FIXgraph=$HOMEgraph/fix
+export USHgraph=$HOMEgraph/ush
+export USHhrly=$USHgraph
+export EXEChrly=$EXECgraph
+export FIXhrly=$FIXgraph
+
+##############################
+# Run setpdy and initialize PDY variables
+##############################
+setpdy.sh
+. ./PDY
+
+##############################################
+# Define comout directory
+##############################################
+export COMIN=${COMIN:-${COMROOT}/${NET}/${envir}/${RUN}.$PDY}
+export COMINm1=${COMINm1:-${COMROOT}/${NET}/${envir}/${RUN}.$PDYm1}
+export COMINgfs=${COMINgfs:-$(compath.py gfs/prod/gfs)}
+export COMINgdas=${COMINgdas:-$(compath.py gfs/prod/gdas)}
+export VOSarch_IN=${VOSarch_IN:-${COMROOT?}/${NET}/${envir}/VOS}
+export COMOUT=${COMOUT:-${COMROOT}/${NET}/${envir}/${RUN}.$PDY}
+mkdir -p $COMOUT
+
+##############################################
+# Define marine stat data comout directory
+##############################################
+export WEBmstats=${WEBmstats:-${COMROOT}/${NET}/${envir}/smstats}
+export MARARCH=${MARARCH:-${COMROOT}/${NET}/${envir}/marine_archive}
+mkdir -p -m 775 $WEBmstats $MARARCH
+
+##############################################
+# Define marine stat scp variables 
+##############################################
+if [[ $envir != 'prod' || $PARATEST = 'YES' ]]; then
+  export REMOTEUSER=${REMOTEUSER:-"nwprod@ncointra.ncep.noaa.gov"}
+  export SRC_DIR=${SRC_DIR:-"$COMROOT/${NET}/${envir}/smstats"}
+  export DEST_DIR=${DEST_DIR:-"/home/nco/nwprod/pmb/nw${envir}/qap"}
+fi
+
+export REMOTEUSER=${REMOTEUSER:-"nwprod@ncorzdm.ncep.noaa.gov"}
+export SRC_DIR=${SRC_DIR:-"$COMROOT/${NET}/prod/smstats"}
+export DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/pmb/qap"}
+export LOGDIR=${LOGDIR:-"$COMROOT/logs/$envir"}
+
+#############################################################
+# Execute the script
+#############################################################
+$HOMEsfcship/scripts/exrw1.sh.ecf
+
+#############################################################
+
+if [ -e "$pgmout" ]; then
+ cat $pgmout
+fi
+
+##############################
+# Remove the Temporary working directory
+##############################
+
+if [ "${KEEPDATA}"!=YES ]; then
+  rm -fr $DATA
+fi
+
+date
+

@@ -1,0 +1,27 @@
+#!/bin/bash -l
+
+. /usrx/local/prod/lmod/lmod/init/bash
+
+
+module purge
+module load EnvVars/1.0.2
+
+module load ips/18.0.1.163
+module load prod_util/1.1.0
+module load prod_envir/1.0.3     # venus & mars /dcom
+
+export w3nco_ver=2.0.6
+export bufr_ver=11.2.0
+module load w3nco/${w3nco_ver:?}
+module load bufr/${bufr_ver:?}
+
+export bufr_dumplist_ver=2.0.2
+export dumpjb_ver=5.0.2
+module load bufr_dumplist/${bufr_dumplist_ver:?}
+module load dumpjb/${dumpjb_ver:?}
+
+export raws_ver=1.0.0
+
+export NWROOT=/raws.v$raws_ver
+ $NWROOT/jobs/JRW4
+

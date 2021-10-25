@@ -1,0 +1,607 @@
++ . /usrx/local/prod/lmod/lmod/init/bash
+++ [[ hB != hxB ]]
+++ XTRACE_STATE=-x
+++ [[ hxB != hxB ]]
+++ VERBOSE_STATE=+v
+++ set +xv
+++ unset XTRACE_STATE VERBOSE_STATE
++ module load ips/18.0.1.163
+++ /usrx/local/prod/lmod/lmod/libexec/lmod bash load ips/18.0.1.163
++ eval 'ADVISOR_2018_DIR="/usrx/local/prod/intel/2018UP01/advisor_2018";' export 'ADVISOR_2018_DIR;' 'CLASSPATH="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/lib64/mpi.jar:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal/lib/daal.jar";' export 'CLASSPATH;' 'CLCK_ROOT="/usrx/local/prod/intel/2018UP01/clck_latest";' export 'CLCK_ROOT;' 'CPATH="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/ipp/include:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl/include:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/pstl/include:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb/include:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal/include";' export 'CPATH;' 'CPLUS_INCLUDE_PATH="/usrx/local/prod/intel/2018UP01/clck_latest/include";' export 'CPLUS_INCLUDE_PATH;' 'DAALROOT="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal";' export 'DAALROOT;' 'GDBSERVER_MIC="/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin/gdbserver";' export 'GDBSERVER_MIC;' 'GDB_CROSS="/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin/gdb-ia";' export 'GDB_CROSS;' 'INFOPATH="/usrx/local/prod/intel/2018UP01/documentation_2018/en/debugger/gdb-ia/info:info_gdb_igfx";' export 'INFOPATH;' 'INSPECTOR_2018_DIR="/usrx/local/prod/intel/2018UP01/inspector_2018";' export 'INSPECTOR_2018_DIR;' 'INTEL_LICENSE_FILE="/usrx/local/prod/intel/licenses";' export 'INTEL_LICENSE_FILE;' 'INTEL_PYTHONHOME="/usrx/local/prod/intel/2018UP01/debugger_2018/python/intel64";' export 'INTEL_PYTHONHOME;' 'IPPROOT="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/ipp";' export 'IPPROOT;' 'I_MPI_HYDRA_IFACE="ib0";' export 'I_MPI_HYDRA_IFACE;' 'I_MPI_ROOT="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi";' export 'I_MPI_ROOT;' 'LD_LIBRARY_PATH="/usrx/local/prod/intel/2018UP01/itac_latest/slib:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/lib64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/ipp/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb/lib/intel64_lin/gcc4.7:/usrx/local/prod/intel/2018UP01/debugger_2018/iga/lib:/usrx/local/prod/intel/2018UP01/debugger_2018/libipt/intel64/lib:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb/lib/intel64_lin/gcc4.4:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/lib";' export 'LD_LIBRARY_PATH;' 'LIBRARY_PATH="/usrx/local/prod/intel/2018UP01/clck_latest/lib/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/ipp/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb/lib/intel64_lin/gcc4.7:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb/lib/intel64_lin/gcc4.4:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/lib";' export 'LIBRARY_PATH;' 'LMOD_FAMILY_COMPILER="ips";' export 'LMOD_FAMILY_COMPILER;' 'LMOD_FAMILY_COMPILER_VERSION="18.0.1.163";' export 'LMOD_FAMILY_COMPILER_VERSION;' 'LOADEDMODULES="EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163";' export 'LOADEDMODULES;' 'MANPATH="/usrx/local/prod/intel/2018UP01/itac_latest/man:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/man/common:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/man:/usrx/local/prod/intel/2018UP01/documentation_2018/en/debugger/gdb-ia/man:/usrx/local/prod/intel/2018UP01/documentation_2018/en/debugger/gdb-igfx/man:/gpfs/lsf/10.1/man:/usrx/local/prod/lmod/lmod/share/man::/usrx/local/prod/intel/2018UP01/inspector_2018/man:/usrx/local/prod/intel/2018UP01/advisor_2018/man";' export 'MANPATH;' 'MKLROOT="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl";' export 'MKLROOT;' 'MODULEPATH="/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1";' export 'MODULEPATH;' 'MPM_LAUNCHER="/usrx/local/prod/intel/2018UP01/debugger_2018/mpm/mic/bin/start_mpm.sh";' export 'MPM_LAUNCHER;' 'NLSPATH="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/lib/intel64_lin/locale/%l_%t/%N:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl/lib/intel64_lin/locale/%l_%t/%N::/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/share/locale/%l_%t/%N";' export 'NLSPATH;' '__LMOD_REF_COUNT_PATH="/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:1;/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:1;/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:1;/usrx/local/prod/intel/2018UP01/itac_latest/bin:1;/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/usr/lpp/mmfs/bin:1;/opt/ibutils/bin:1;/opt/dell/srvadmin/bin:1;/u/Simon.Hsiao/bin:1;/usrx/local/bin:1";' export '__LMOD_REF_COUNT_PATH;' 'PATH="/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:/usrx/local/prod/intel/2018UP01/itac_latest/bin:/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:/u/Simon.Hsiao/bin:/usrx/local/bin";' export 'PATH;' 'PKG_CONFIG_PATH="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl/bin/pkgconfig";' export 'PKG_CONFIG_PATH;' 'PSTLROOT="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/pstl";' export 'PSTLROOT;' 'PYTHONPATH="/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi";' export 'PYTHONPATH;' 'TBBROOT="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb";' export 'TBBROOT;' 'VT_ADD_LIBS="-ldwarf' -lelf -lvtunwind -lm '-lpthread";' export 'VT_ADD_LIBS;' 'VT_ARCH="intel64";' export 'VT_ARCH;' 'VT_LIB_DIR="/usrx/local/prod/intel/2018UP01/itac_latest/lib";' export 'VT_LIB_DIR;' 'VT_MPI="impi4";' export 'VT_MPI;' 'VT_ROOT="/usrx/local/prod/intel/2018UP01/itac_latest";' export 'VT_ROOT;' 'VT_SLIB_DIR="/usrx/local/prod/intel/2018UP01/itac_latest/slib";' export 'VT_SLIB_DIR;' '_LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxpcHM9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2lwcy8xOC4wLjEuMTYzIixb";' export '_ModuleTable001_;' '_ModuleTable002_="ImZ1bGxOYW1lIl09Imlwcy8xOC4wLjEuMTYzIixbImxvYWRPcmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaXBzLzE4LjAuMS4xNjMiLH0sbHNmPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9sc2YvMTAuMSIsWyJmdWxsTmFtZSJdPSJsc2YvMTAuMSIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImxzZi8xMC4xIix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZz";' export '_ModuleTable002_;' '_ModuleTable003_="IiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl90aGlyZC9pcHMvMTguMC4xIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvdXNyeC9sb2NhbC9wcm9kL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZDovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnM6L2dwZnMvZGVsbDEv";' export '_ModuleTable003_;' '_ModuleTable004_="bmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIix9";' export '_ModuleTable004_;' '_ModuleTable_Sz_="4";' export '_ModuleTable_Sz_;'
+++ ADVISOR_2018_DIR=/usrx/local/prod/intel/2018UP01/advisor_2018
+++ export ADVISOR_2018_DIR
+++ CLASSPATH=/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/lib64/mpi.jar:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal/lib/daal.jar
+++ export CLASSPATH
+++ CLCK_ROOT=/usrx/local/prod/intel/2018UP01/clck_latest
+++ export CLCK_ROOT
+++ CPATH=/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/ipp/include:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl/include:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/pstl/include:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb/include:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal/include
+++ export CPATH
+++ CPLUS_INCLUDE_PATH=/usrx/local/prod/intel/2018UP01/clck_latest/include
+++ export CPLUS_INCLUDE_PATH
+++ DAALROOT=/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal
+++ export DAALROOT
+++ GDBSERVER_MIC=/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin/gdbserver
+++ export GDBSERVER_MIC
+++ GDB_CROSS=/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin/gdb-ia
+++ export GDB_CROSS
+++ INFOPATH=/usrx/local/prod/intel/2018UP01/documentation_2018/en/debugger/gdb-ia/info:info_gdb_igfx
+++ export INFOPATH
+++ INSPECTOR_2018_DIR=/usrx/local/prod/intel/2018UP01/inspector_2018
+++ export INSPECTOR_2018_DIR
+++ INTEL_LICENSE_FILE=/usrx/local/prod/intel/licenses
+++ export INTEL_LICENSE_FILE
+++ INTEL_PYTHONHOME=/usrx/local/prod/intel/2018UP01/debugger_2018/python/intel64
+++ export INTEL_PYTHONHOME
+++ IPPROOT=/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/ipp
+++ export IPPROOT
+++ I_MPI_HYDRA_IFACE=ib0
+++ export I_MPI_HYDRA_IFACE
+++ I_MPI_ROOT=/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi
+++ export I_MPI_ROOT
+++ LD_LIBRARY_PATH=/usrx/local/prod/intel/2018UP01/itac_latest/slib:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/lib64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/ipp/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb/lib/intel64_lin/gcc4.7:/usrx/local/prod/intel/2018UP01/debugger_2018/iga/lib:/usrx/local/prod/intel/2018UP01/debugger_2018/libipt/intel64/lib:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb/lib/intel64_lin/gcc4.4:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+++ export LD_LIBRARY_PATH
+++ LIBRARY_PATH=/usrx/local/prod/intel/2018UP01/clck_latest/lib/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/ipp/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb/lib/intel64_lin/gcc4.7:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal/lib/intel64_lin:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb/lib/intel64_lin/gcc4.4:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+++ export LIBRARY_PATH
+++ LMOD_FAMILY_COMPILER=ips
+++ export LMOD_FAMILY_COMPILER
+++ LMOD_FAMILY_COMPILER_VERSION=18.0.1.163
+++ export LMOD_FAMILY_COMPILER_VERSION
+++ LOADEDMODULES=EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163
+++ export LOADEDMODULES
+++ MANPATH=/usrx/local/prod/intel/2018UP01/itac_latest/man:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/man/common:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/man:/usrx/local/prod/intel/2018UP01/documentation_2018/en/debugger/gdb-ia/man:/usrx/local/prod/intel/2018UP01/documentation_2018/en/debugger/gdb-igfx/man:/gpfs/lsf/10.1/man:/usrx/local/prod/lmod/lmod/share/man::/usrx/local/prod/intel/2018UP01/inspector_2018/man:/usrx/local/prod/intel/2018UP01/advisor_2018/man
+++ export MANPATH
+++ MKLROOT=/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl
+++ export MKLROOT
+++ MODULEPATH=/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1
+++ export MODULEPATH
+++ MPM_LAUNCHER=/usrx/local/prod/intel/2018UP01/debugger_2018/mpm/mic/bin/start_mpm.sh
+++ export MPM_LAUNCHER
+++ NLSPATH=/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/lib/intel64_lin/locale/%l_%t/%N:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl/lib/intel64_lin/locale/%l_%t/%N::/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/share/locale/%l_%t/%N
+++ export NLSPATH
+++ __LMOD_REF_COUNT_PATH='/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:1;/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:1;/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:1;/usrx/local/prod/intel/2018UP01/itac_latest/bin:1;/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/usr/lpp/mmfs/bin:1;/opt/ibutils/bin:1;/opt/dell/srvadmin/bin:1;/u/Simon.Hsiao/bin:1;/usrx/local/bin:1'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:/usrx/local/prod/intel/2018UP01/itac_latest/bin:/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:/u/Simon.Hsiao/bin:/usrx/local/bin
+++ export PATH
+++ PKG_CONFIG_PATH=/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl/bin/pkgconfig
+++ export PKG_CONFIG_PATH
+++ PSTLROOT=/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/pstl
+++ export PSTLROOT
+++ PYTHONPATH=/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi
+++ export PYTHONPATH
+++ TBBROOT=/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb
+++ export TBBROOT
+++ VT_ADD_LIBS='-ldwarf -lelf -lvtunwind -lm -lpthread'
+++ export VT_ADD_LIBS
+++ VT_ARCH=intel64
+++ export VT_ARCH
+++ VT_LIB_DIR=/usrx/local/prod/intel/2018UP01/itac_latest/lib
+++ export VT_LIB_DIR
+++ VT_MPI=impi4
+++ export VT_MPI
+++ VT_ROOT=/usrx/local/prod/intel/2018UP01/itac_latest
+++ export VT_ROOT
+++ VT_SLIB_DIR=/usrx/local/prod/intel/2018UP01/itac_latest/slib
+++ export VT_SLIB_DIR
+++ _LMFILES_=/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxpcHM9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2lwcy8xOC4wLjEuMTYzIixb
+++ export _ModuleTable001_
+++ _ModuleTable002_=ImZ1bGxOYW1lIl09Imlwcy8xOC4wLjEuMTYzIixbImxvYWRPcmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaXBzLzE4LjAuMS4xNjMiLH0sbHNmPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9sc2YvMTAuMSIsWyJmdWxsTmFtZSJdPSJsc2YvMTAuMSIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImxzZi8xMC4xIix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZz
+++ export _ModuleTable002_
+++ _ModuleTable003_=IiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl90aGlyZC9pcHMvMTguMC4xIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvdXNyeC9sb2NhbC9wcm9kL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZDovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnM6L2dwZnMvZGVsbDEv
+++ export _ModuleTable003_
+++ _ModuleTable004_=bmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIix9
+++ export _ModuleTable004_
+++ _ModuleTable_Sz_=4
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load impi/18.0.1
+++ /usrx/local/prod/lmod/lmod/libexec/lmod bash load impi/18.0.1
++ eval 'I_MPI_CC="icc";' export 'I_MPI_CC;' 'I_MPI_CXX="icpc";' export 'I_MPI_CXX;' 'I_MPI_EXTRA_FILESYSTEM="yes";' export 'I_MPI_EXTRA_FILESYSTEM;' 'I_MPI_EXTRA_FILESYSTEM_LIST="gpfs";' export 'I_MPI_EXTRA_FILESYSTEM_LIST;' 'I_MPI_F77="ifort";' export 'I_MPI_F77;' 'I_MPI_F90="ifort";' export 'I_MPI_F90;' 'I_MPI_FC="ifort";' export 'I_MPI_FC;' 'I_MPI_HYDRA_BOOTSTRAP="lsf";' export 'I_MPI_HYDRA_BOOTSTRAP;' 'I_MPI_LSF_USE_COLLECTIVE_LAUNCH="1";' export 'I_MPI_LSF_USE_COLLECTIVE_LAUNCH;' 'KMP_AFFINITY="scatter";' export 'KMP_AFFINITY;' 'LMOD_FAMILY_MPI="impi";' export 'LMOD_FAMILY_MPI;' 'LMOD_FAMILY_MPI_VERSION="18.0.1";' export 'LMOD_FAMILY_MPI_VERSION;' '__LMOD_REF_COUNT_LOADEDMODULES="EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1";' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES="EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1";' export 'LOADEDMODULES;' 'MODULEPATH="/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1";' export 'MODULEPATH;' '__LMOD_REF_COUNT__LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1";' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBp";' export '_ModuleTable001_;' '_ModuleTable002_="L2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2Nv";' export '_ModuleTable002_;' '_ModuleTable003_="cmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAuMSIsfSx9LG1wYXRoQT17Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmcyIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBz";' export '_ModuleTable003_;' '_ModuleTable004_="LzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL21waV90aGlyZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvbXBpX3Byb2QvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvdXNyeC9sb2NhbC9wcm9kL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZDovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnM6L2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29y";' export '_ModuleTable004_;' '_ModuleTable005_="ZV9wcm9kIix9";' export '_ModuleTable005_;' '_ModuleTable_Sz_="5";' export '_ModuleTable_Sz_;'
+++ I_MPI_CC=icc
+++ export I_MPI_CC
+++ I_MPI_CXX=icpc
+++ export I_MPI_CXX
+++ I_MPI_EXTRA_FILESYSTEM=yes
+++ export I_MPI_EXTRA_FILESYSTEM
+++ I_MPI_EXTRA_FILESYSTEM_LIST=gpfs
+++ export I_MPI_EXTRA_FILESYSTEM_LIST
+++ I_MPI_F77=ifort
+++ export I_MPI_F77
+++ I_MPI_F90=ifort
+++ export I_MPI_F90
+++ I_MPI_FC=ifort
+++ export I_MPI_FC
+++ I_MPI_HYDRA_BOOTSTRAP=lsf
+++ export I_MPI_HYDRA_BOOTSTRAP
+++ I_MPI_LSF_USE_COLLECTIVE_LAUNCH=1
+++ export I_MPI_LSF_USE_COLLECTIVE_LAUNCH
+++ KMP_AFFINITY=scatter
+++ export KMP_AFFINITY
+++ LMOD_FAMILY_MPI=impi
+++ export LMOD_FAMILY_MPI
+++ LMOD_FAMILY_MPI_VERSION=18.0.1
+++ export LMOD_FAMILY_MPI_VERSION
+++ __LMOD_REF_COUNT_LOADEDMODULES='EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1
+++ export LOADEDMODULES
+++ MODULEPATH=/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1
+++ export MODULEPATH
+++ __LMOD_REF_COUNT__LMFILES_='/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBp
+++ export _ModuleTable001_
+++ _ModuleTable002_=L2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2Nv
+++ export _ModuleTable002_
+++ _ModuleTable003_=cmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAuMSIsfSx9LG1wYXRoQT17Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmcyIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBz
+++ export _ModuleTable003_
+++ _ModuleTable004_=LzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL21waV90aGlyZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvbXBpX3Byb2QvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvdXNyeC9sb2NhbC9wcm9kL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZDovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnM6L2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29y
+++ export _ModuleTable004_
+++ _ModuleTable005_=ZV9wcm9kIix9
+++ export _ModuleTable005_
+++ _ModuleTable_Sz_=5
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load prod_util/1.1.0
+++ /usrx/local/prod/lmod/lmod/libexec/lmod bash load prod_util/1.1.0
++ eval 'COMDATEROOT="/gpfs/dell1/nco/ops/com";' export 'COMDATEROOT;' 'COMLISTROOT="/gpfs/dell1/nco/ops/config";' export 'COMLISTROOT;' 'FSYNC="/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/fsync_file";' export 'FSYNC;' '__LMOD_REF_COUNT_LOADEDMODULES="EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1";' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES="EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0";' export 'LOADEDMODULES;' 'MDATE="/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/mdate";' export 'MDATE;' 'MODULEPATH="/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1";' export 'MODULEPATH;' 'NDATE="/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate";' export 'NDATE;' 'NHOUR="/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/nhour";' export 'NHOUR;' '__LMOD_REF_COUNT_PATH="/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:1;/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:1;/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:1;/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:1;/usrx/local/prod/intel/2018UP01/itac_latest/bin:1;/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/usr/lpp/mmfs/bin:1;/opt/ibutils/bin:1;/opt/dell/srvadmin/bin:1;/u/Simon.Hsiao/bin:1;/usrx/local/bin:1";' export '__LMOD_REF_COUNT_PATH;' 'PATH="/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:/usrx/local/prod/intel/2018UP01/itac_latest/bin:/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:/u/Simon.Hsiao/bin:/usrx/local/bin";' export 'PATH;' '__LMOD_REF_COUNT_PYTHONPATH="/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:1;/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi:1";' export '__LMOD_REF_COUNT_PYTHONPATH;' 'PYTHONPATH="/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi";' export 'PYTHONPATH;' 'UTILROOT="/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0";' export 'UTILROOT;' '__LMOD_REF_COUNT__LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1";' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBp";' export '_ModuleTable001_;' '_ModuleTable002_="L2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2Nv";' export '_ModuleTable002_;' '_ModuleTable003_="cmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAuMSIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLH0sfSxtcGF0aEE9eyIvdXNyeC9sb2NhbC9wcm9k";' export '_ModuleTable003_;' '_ModuleTable004_="L21vZHVsZWZpbGVzL2NvcmVfdGhpcmQiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnMiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3RoaXJkL2lwcy8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX21waS9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9tcGlfdGhpcmQvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21v";' export '_ModuleTable004_;' '_ModuleTable005_="ZHVsZWZpbGVzL21waV9wcm9kL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZTovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQ6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzOi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsfQ==";' export '_ModuleTable005_;' '_ModuleTable_Sz_="5";' export '_ModuleTable_Sz_;'
+++ COMDATEROOT=/gpfs/dell1/nco/ops/com
+++ export COMDATEROOT
+++ COMLISTROOT=/gpfs/dell1/nco/ops/config
+++ export COMLISTROOT
+++ FSYNC=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/fsync_file
+++ export FSYNC
+++ __LMOD_REF_COUNT_LOADEDMODULES='EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0
+++ export LOADEDMODULES
+++ MDATE=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/mdate
+++ export MDATE
+++ MODULEPATH=/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1
+++ export MODULEPATH
+++ NDATE=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate
+++ export NDATE
+++ NHOUR=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/nhour
+++ export NHOUR
+++ __LMOD_REF_COUNT_PATH='/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:1;/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:1;/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:1;/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:1;/usrx/local/prod/intel/2018UP01/itac_latest/bin:1;/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/usr/lpp/mmfs/bin:1;/opt/ibutils/bin:1;/opt/dell/srvadmin/bin:1;/u/Simon.Hsiao/bin:1;/usrx/local/bin:1'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:/usrx/local/prod/intel/2018UP01/itac_latest/bin:/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:/u/Simon.Hsiao/bin:/usrx/local/bin
+++ export PATH
+++ __LMOD_REF_COUNT_PYTHONPATH='/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:1;/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi:1'
+++ export __LMOD_REF_COUNT_PYTHONPATH
+++ PYTHONPATH=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi
+++ export PYTHONPATH
+++ UTILROOT=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0
+++ export UTILROOT
+++ __LMOD_REF_COUNT__LMFILES_='/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBp
+++ export _ModuleTable001_
+++ _ModuleTable002_=L2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2Nv
+++ export _ModuleTable002_
+++ _ModuleTable003_=cmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAuMSIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLH0sfSxtcGF0aEE9eyIvdXNyeC9sb2NhbC9wcm9k
+++ export _ModuleTable003_
+++ _ModuleTable004_=L21vZHVsZWZpbGVzL2NvcmVfdGhpcmQiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnMiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3RoaXJkL2lwcy8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX21waS9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9tcGlfdGhpcmQvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21v
+++ export _ModuleTable004_
+++ _ModuleTable005_=ZHVsZWZpbGVzL21waV9wcm9kL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZTovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQ6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzOi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsfQ==
+++ export _ModuleTable005_
+++ _ModuleTable_Sz_=5
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load graphics/2.0.0
+++ /usrx/local/prod/lmod/lmod/libexec/lmod bash load graphics/2.0.0
++ eval 'COMP="ips";' export 'COMP;' 'DECOD_UT_LIB="/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libdecod_ut_v2.0.0.a";' export 'DECOD_UT_LIB;' 'GPHCNTR_LIB8="/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libgphcntr_v2.0.0_8.a";' export 'GPHCNTR_LIB8;' 'GPHFONT_LIB8="/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libgphfont_v2.0.0_8.a";' export 'GPHFONT_LIB8;' 'GPH_LIB8="/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libgph_v2.0.0_8.a";' export 'GPH_LIB8;' 'GRAPHICS_SRC="/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/src";' export 'GRAPHICS_SRC;' '__LMOD_REF_COUNT_LOADEDMODULES="EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1;graphics/2.0.0:1";' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES="EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0:graphics/2.0.0";' export 'LOADEDMODULES;' 'MODULEPATH="/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1";' export 'MODULEPATH;' 'UTIL_LIB="/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libutil_v2.0.0.a";' export 'UTIL_LIB;' 'W3G_LIB8="/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libw3g_v2.0.0_8.a";' export 'W3G_LIB8;' '__LMOD_REF_COUNT__LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:1";' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxncmFwaGljcz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxl";' export '_ModuleTable001_;' '_ModuleTable002_="cy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvZ3JhcGhpY3MvMi4wLjAiLFsiZnVsbE5hbWUiXT0iZ3JhcGhpY3MvMi4wLjAiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91";' export '_ModuleTable002_;' '_ModuleTable003_="c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAuMSIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEv";' export '_ModuleTable003_;' '_ModuleTable004_="bmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLH0sfSxtcGF0aEE9eyIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnMiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3RoaXJkL2lwcy8x";' export '_ModuleTable004_;' '_ModuleTable005_="OC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX21waS9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9tcGlfdGhpcmQvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL21waV9wcm9kL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZTovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQ6L3VzcngvbG9jYWwv";' export '_ModuleTable005_;' '_ModuleTable006_="cHJvZC9tb2R1bGVmaWxlcy9kZWZzOi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsfQ==";' export '_ModuleTable006_;' '_ModuleTable_Sz_="6";' export '_ModuleTable_Sz_;'
+++ COMP=ips
+++ export COMP
+++ DECOD_UT_LIB=/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libdecod_ut_v2.0.0.a
+++ export DECOD_UT_LIB
+++ GPHCNTR_LIB8=/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libgphcntr_v2.0.0_8.a
+++ export GPHCNTR_LIB8
+++ GPHFONT_LIB8=/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libgphfont_v2.0.0_8.a
+++ export GPHFONT_LIB8
+++ GPH_LIB8=/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libgph_v2.0.0_8.a
+++ export GPH_LIB8
+++ GRAPHICS_SRC=/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/src
+++ export GRAPHICS_SRC
+++ __LMOD_REF_COUNT_LOADEDMODULES='EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1;graphics/2.0.0:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0:graphics/2.0.0
+++ export LOADEDMODULES
+++ MODULEPATH=/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1
+++ export MODULEPATH
+++ UTIL_LIB=/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libutil_v2.0.0.a
+++ export UTIL_LIB
+++ W3G_LIB8=/gpfs/dell1/nco/ops/nwprod/lib/graphics/v2.0.0/ips/18.0.1/libw3g_v2.0.0_8.a
+++ export W3G_LIB8
+++ __LMOD_REF_COUNT__LMFILES_='/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxncmFwaGljcz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxl
+++ export _ModuleTable001_
+++ _ModuleTable002_=cy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvZ3JhcGhpY3MvMi4wLjAiLFsiZnVsbE5hbWUiXT0iZ3JhcGhpY3MvMi4wLjAiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91
+++ export _ModuleTable002_
+++ _ModuleTable003_=c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAuMSIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEv
+++ export _ModuleTable003_
+++ _ModuleTable004_=bmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLH0sfSxtcGF0aEE9eyIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnMiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3RoaXJkL2lwcy8x
+++ export _ModuleTable004_
+++ _ModuleTable005_=OC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX21waS9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9tcGlfdGhpcmQvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL21waV9wcm9kL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZTovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQ6L3VzcngvbG9jYWwv
+++ export _ModuleTable005_
+++ _ModuleTable006_=cHJvZC9tb2R1bGVmaWxlcy9kZWZzOi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsfQ==
+++ export _ModuleTable006_
+++ _ModuleTable_Sz_=6
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ export w3nco_ver=2.0.6
++ w3nco_ver=2.0.6
++ export w3emc_ver=2.3.0
++ w3emc_ver=2.3.0
++ export bacio_ver=2.0.2
++ bacio_ver=2.0.2
++ export bufr_ver=11.3.0
++ bufr_ver=11.3.0
++ module load w3nco/2.0.6
+++ /usrx/local/prod/lmod/lmod/libexec/lmod bash load w3nco/2.0.6
++ eval 'COMP="ips";' export 'COMP;' '__LMOD_REF_COUNT_LOADEDMODULES="EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1;graphics/2.0.0:1;w3nco/2.0.6:1";' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES="EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0:graphics/2.0.0:w3nco/2.0.6";' export 'LOADEDMODULES;' 'MODULEPATH="/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1";' export 'MODULEPATH;' 'W3NCO_LIB4="/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/ips/18.0.1/libw3nco_v2.0.6_4.a";' export 'W3NCO_LIB4;' 'W3NCO_LIB8="/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/ips/18.0.1/libw3nco_v2.0.6_8.a";' export 'W3NCO_LIB8;' 'W3NCO_LIBd="/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/ips/18.0.1/libw3nco_v2.0.6_d.a";' export 'W3NCO_LIBd;' 'W3NCO_SRC="/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/src";' export 'W3NCO_SRC;' 'W3NCO_VER="v2.0.6";' export 'W3NCO_VER;' '__LMOD_REF_COUNT__LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:1";' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxncmFwaGljcz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxl";' export '_ModuleTable001_;' '_ModuleTable002_="cy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvZ3JhcGhpY3MvMi4wLjAiLFsiZnVsbE5hbWUiXT0iZ3JhcGhpY3MvMi4wLjAiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91";' export '_ModuleTable002_;' '_ModuleTable003_="c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAuMSIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEv";' export '_ModuleTable003_;' '_ModuleTable004_="bmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLH0sdzNuY289e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3czbmNvLzIuMC42IixbImZ1bGxOYW1lIl09InczbmNvLzIuMC42IixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5h";' export '_ModuleTable004_;' '_ModuleTable005_="bWUiXT0idzNuY28vMi4wLjYiLH0sfSxtcGF0aEE9eyIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnMiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3RoaXJkL2lwcy8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX21waS9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9tcGlfdGhpcmQvaXBzLzE4";' export '_ModuleTable005_;' '_ModuleTable006_="LjAuMS9pbXBpLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL21waV9wcm9kL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZTovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQ6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzOi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsfQ==";' export '_ModuleTable006_;' '_ModuleTable_Sz_="6";' export '_ModuleTable_Sz_;'
+++ COMP=ips
+++ export COMP
+++ __LMOD_REF_COUNT_LOADEDMODULES='EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1;graphics/2.0.0:1;w3nco/2.0.6:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0:graphics/2.0.0:w3nco/2.0.6
+++ export LOADEDMODULES
+++ MODULEPATH=/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1
+++ export MODULEPATH
+++ W3NCO_LIB4=/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/ips/18.0.1/libw3nco_v2.0.6_4.a
+++ export W3NCO_LIB4
+++ W3NCO_LIB8=/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/ips/18.0.1/libw3nco_v2.0.6_8.a
+++ export W3NCO_LIB8
+++ W3NCO_LIBd=/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/ips/18.0.1/libw3nco_v2.0.6_d.a
+++ export W3NCO_LIBd
+++ W3NCO_SRC=/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/src
+++ export W3NCO_SRC
+++ W3NCO_VER=v2.0.6
+++ export W3NCO_VER
+++ __LMOD_REF_COUNT__LMFILES_='/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxncmFwaGljcz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxl
+++ export _ModuleTable001_
+++ _ModuleTable002_=cy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvZ3JhcGhpY3MvMi4wLjAiLFsiZnVsbE5hbWUiXT0iZ3JhcGhpY3MvMi4wLjAiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91
+++ export _ModuleTable002_
+++ _ModuleTable003_=c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAuMSIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEv
+++ export _ModuleTable003_
+++ _ModuleTable004_=bmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLH0sdzNuY289e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3czbmNvLzIuMC42IixbImZ1bGxOYW1lIl09InczbmNvLzIuMC42IixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5h
+++ export _ModuleTable004_
+++ _ModuleTable005_=bWUiXT0idzNuY28vMi4wLjYiLH0sfSxtcGF0aEE9eyIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnMiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3RoaXJkL2lwcy8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX21waS9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9tcGlfdGhpcmQvaXBzLzE4
+++ export _ModuleTable005_
+++ _ModuleTable006_=LjAuMS9pbXBpLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL21waV9wcm9kL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZTovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQ6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzOi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsfQ==
+++ export _ModuleTable006_
+++ _ModuleTable_Sz_=6
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load bufr/11.3.0
+++ /usrx/local/prod/lmod/lmod/libexec/lmod bash load bufr/11.3.0
++ eval 'BUFR_LIB4="/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_4_64.a";' export 'BUFR_LIB4;' 'BUFR_LIB4_DA="/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_4_64_DA.a";' export 'BUFR_LIB4_DA;' 'BUFR_LIB8="/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_8_64.a";' export 'BUFR_LIB8;' 'BUFR_LIB8_DA="/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_8_64_DA.a";' export 'BUFR_LIB8_DA;' 'BUFR_LIBd="/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_d_64.a";' export 'BUFR_LIBd;' 'BUFR_LIBd_DA="/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_d_64_DA.a";' export 'BUFR_LIBd_DA;' 'BUFR_SRC="/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/src";' export 'BUFR_SRC;' 'BUFR_VER="v11.3.0";' export 'BUFR_VER;' '__LMOD_REF_COUNT_LOADEDMODULES="EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1;graphics/2.0.0:1;w3nco/2.0.6:1;bufr/11.3.0:1";' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES="EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0:graphics/2.0.0:w3nco/2.0.6:bufr/11.3.0";' export 'LOADEDMODULES;' 'MODULEPATH="/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1";' export 'MODULEPATH;' '__LMOD_REF_COUNT__LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0:1";' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxidWZyPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2Nv";' export '_ModuleTable001_;' '_ModuleTable002_="bXBpbGVyX3Byb2QvaXBzLzE4LjAuMS9idWZyLzExLjMuMCIsWyJmdWxsTmFtZSJdPSJidWZyLzExLjMuMCIsWyJsb2FkT3JkZXIiXT04LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImJ1ZnIvMTEuMy4wIix9LGdyYXBoaWNzPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMS9ncmFwaGljcy8yLjAuMCIsWyJmdWxsTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsWyJsb2FkT3JkZXIiXT02LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImdyYXBoaWNzLzIuMC4wIix9LGltcGk9e1si";' export '_ModuleTable002_;' '_ModuleTable003_="Zm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMS5sdWEiLFsiZnVsbE5hbWUiXT0iaW1waS8xOC4wLjEiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJpbXBpLzE4LjAuMSIsfSxpcHM9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2lwcy8xOC4wLjEuMTYzIixbImZ1bGxOYW1lIl09Imlwcy8xOC4wLjEuMTYzIixbImxvYWRPcmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaXBzLzE4LjAuMS4xNjMi";' export '_ModuleTable003_;' '_ModuleTable004_="LH0sbHNmPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9sc2YvMTAuMSIsWyJmdWxsTmFtZSJdPSJsc2YvMTAuMSIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImxzZi8xMC4xIix9LHByb2RfdXRpbD17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvcHJvZF91dGlsLzEuMS4wIixbImZ1bGxOYW1lIl09InByb2RfdXRpbC8xLjEuMCIsWyJsb2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09";' export '_ModuleTable004_;' '_ModuleTable005_="InByb2RfdXRpbC8xLjEuMCIsfSx3M25jbz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvdzNuY28vMi4wLjYiLFsiZnVsbE5hbWUiXT0idzNuY28vMi4wLjYiLFsibG9hZE9yZGVyIl09Nyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ3M25jby8yLjAuNiIsfSx9LG1wYXRoQT17Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmcyIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsIi91c3J4L2xvY2FsL3By";' export '_ModuleTable005_;' '_ModuleTable006_="b2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL21waV90aGlyZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvbXBpX3Byb2QvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvdXNyeC9sb2NhbC9wcm9kL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlOi91c3J4L2xvY2FsL3Byb2Qv";' export '_ModuleTable006_;' '_ModuleTable007_="bW9kdWxlZmlsZXMvY29yZV90aGlyZDovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnM6L2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIix9";' export '_ModuleTable007_;' '_ModuleTable_Sz_="7";' export '_ModuleTable_Sz_;'
+++ BUFR_LIB4=/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_4_64.a
+++ export BUFR_LIB4
+++ BUFR_LIB4_DA=/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_4_64_DA.a
+++ export BUFR_LIB4_DA
+++ BUFR_LIB8=/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_8_64.a
+++ export BUFR_LIB8
+++ BUFR_LIB8_DA=/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_8_64_DA.a
+++ export BUFR_LIB8_DA
+++ BUFR_LIBd=/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_d_64.a
+++ export BUFR_LIBd
+++ BUFR_LIBd_DA=/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/ips/18.0.1/libbufr_v11.3.0_d_64_DA.a
+++ export BUFR_LIBd_DA
+++ BUFR_SRC=/gpfs/dell1/nco/ops/nwprod/lib/bufr/v11.3.0/src
+++ export BUFR_SRC
+++ BUFR_VER=v11.3.0
+++ export BUFR_VER
+++ __LMOD_REF_COUNT_LOADEDMODULES='EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1;graphics/2.0.0:1;w3nco/2.0.6:1;bufr/11.3.0:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0:graphics/2.0.0:w3nco/2.0.6:bufr/11.3.0
+++ export LOADEDMODULES
+++ MODULEPATH=/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1
+++ export MODULEPATH
+++ __LMOD_REF_COUNT__LMFILES_='/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxidWZyPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2Nv
+++ export _ModuleTable001_
+++ _ModuleTable002_=bXBpbGVyX3Byb2QvaXBzLzE4LjAuMS9idWZyLzExLjMuMCIsWyJmdWxsTmFtZSJdPSJidWZyLzExLjMuMCIsWyJsb2FkT3JkZXIiXT04LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImJ1ZnIvMTEuMy4wIix9LGdyYXBoaWNzPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMS9ncmFwaGljcy8yLjAuMCIsWyJmdWxsTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsWyJsb2FkT3JkZXIiXT02LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImdyYXBoaWNzLzIuMC4wIix9LGltcGk9e1si
+++ export _ModuleTable002_
+++ _ModuleTable003_=Zm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMS5sdWEiLFsiZnVsbE5hbWUiXT0iaW1waS8xOC4wLjEiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJpbXBpLzE4LjAuMSIsfSxpcHM9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2lwcy8xOC4wLjEuMTYzIixbImZ1bGxOYW1lIl09Imlwcy8xOC4wLjEuMTYzIixbImxvYWRPcmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaXBzLzE4LjAuMS4xNjMi
+++ export _ModuleTable003_
+++ _ModuleTable004_=LH0sbHNmPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9sc2YvMTAuMSIsWyJmdWxsTmFtZSJdPSJsc2YvMTAuMSIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImxzZi8xMC4xIix9LHByb2RfdXRpbD17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvcHJvZF91dGlsLzEuMS4wIixbImZ1bGxOYW1lIl09InByb2RfdXRpbC8xLjEuMCIsWyJsb2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09
+++ export _ModuleTable004_
+++ _ModuleTable005_=InByb2RfdXRpbC8xLjEuMCIsfSx3M25jbz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvdzNuY28vMi4wLjYiLFsiZnVsbE5hbWUiXT0idzNuY28vMi4wLjYiLFsibG9hZE9yZGVyIl09Nyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ3M25jby8yLjAuNiIsfSx9LG1wYXRoQT17Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmcyIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsIi91c3J4L2xvY2FsL3By
+++ export _ModuleTable005_
+++ _ModuleTable006_=b2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL21waV90aGlyZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvbXBpX3Byb2QvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMSIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvdXNyeC9sb2NhbC9wcm9kL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlOi91c3J4L2xvY2FsL3Byb2Qv
+++ export _ModuleTable006_
+++ _ModuleTable007_=bW9kdWxlZmlsZXMvY29yZV90aGlyZDovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnM6L2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIix9
+++ export _ModuleTable007_
+++ _ModuleTable_Sz_=7
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load w3emc/2.3.0
+++ /usrx/local/prod/lmod/lmod/libexec/lmod bash load w3emc/2.3.0
++ eval 'COMP="ips";' export 'COMP;' '__LMOD_REF_COUNT_LOADEDMODULES="EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1;graphics/2.0.0:1;w3nco/2.0.6:1;bufr/11.3.0:1;w3emc/2.3.0:1";' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES="EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0:graphics/2.0.0:w3nco/2.0.6:bufr/11.3.0:w3emc/2.3.0";' export 'LOADEDMODULES;' 'MODULEPATH="/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1";' export 'MODULEPATH;' 'W3EMC_INC4="/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/include/w3emc_v2.3.0_4";' export 'W3EMC_INC4;' 'W3EMC_INC8="/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/include/w3emc_v2.3.0_8";' export 'W3EMC_INC8;' 'W3EMC_INCd="/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/include/w3emc_v2.3.0_d";' export 'W3EMC_INCd;' 'W3EMC_LIB4="/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/libw3emc_v2.3.0_4.a";' export 'W3EMC_LIB4;' 'W3EMC_LIB8="/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/libw3emc_v2.3.0_8.a";' export 'W3EMC_LIB8;' 'W3EMC_LIBd="/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/libw3emc_v2.3.0_d.a";' export 'W3EMC_LIBd;' 'W3EMC_SRC="/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/src/libsrc";' export 'W3EMC_SRC;' 'W3EMC_VER="v2.3.0";' export 'W3EMC_VER;' '__LMOD_REF_COUNT__LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/w3emc/2.3.0:1";' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/w3emc/2.3.0";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxidWZyPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2Nv";' export '_ModuleTable001_;' '_ModuleTable002_="bXBpbGVyX3Byb2QvaXBzLzE4LjAuMS9idWZyLzExLjMuMCIsWyJmdWxsTmFtZSJdPSJidWZyLzExLjMuMCIsWyJsb2FkT3JkZXIiXT04LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImJ1ZnIvMTEuMy4wIix9LGdyYXBoaWNzPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMS9ncmFwaGljcy8yLjAuMCIsWyJmdWxsTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsWyJsb2FkT3JkZXIiXT02LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImdyYXBoaWNzLzIuMC4wIix9LGltcGk9e1si";' export '_ModuleTable002_;' '_ModuleTable003_="Zm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMS5sdWEiLFsiZnVsbE5hbWUiXT0iaW1waS8xOC4wLjEiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJpbXBpLzE4LjAuMSIsfSxpcHM9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2lwcy8xOC4wLjEuMTYzIixbImZ1bGxOYW1lIl09Imlwcy8xOC4wLjEuMTYzIixbImxvYWRPcmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaXBzLzE4LjAuMS4xNjMi";' export '_ModuleTable003_;' '_ModuleTable004_="LH0sbHNmPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9sc2YvMTAuMSIsWyJmdWxsTmFtZSJdPSJsc2YvMTAuMSIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImxzZi8xMC4xIix9LHByb2RfdXRpbD17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvcHJvZF91dGlsLzEuMS4wIixbImZ1bGxOYW1lIl09InByb2RfdXRpbC8xLjEuMCIsWyJsb2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09";' export '_ModuleTable004_;' '_ModuleTable005_="InByb2RfdXRpbC8xLjEuMCIsfSx3M2VtYz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xL3czZW1jLzIuMy4wIixbImZ1bGxOYW1lIl09InczZW1jLzIuMy4wIixbImxvYWRPcmRlciJdPTkscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0idzNlbWMvMi4zLjAiLH0sdzNuY289e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3czbmNvLzIuMC42IixbImZ1bGxOYW1lIl09InczbmNvLzIuMC42IixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJz";' export '_ModuleTable005_;' '_ModuleTable006_="dGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0idzNuY28vMi4wLjYiLH0sfSxtcGF0aEE9eyIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnMiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3RoaXJkL2lwcy8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX21waS9pcHMvMTguMC4xIiwiL3Vz";' export '_ModuleTable006_;' '_ModuleTable007_="cngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9tcGlfdGhpcmQvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL21waV9wcm9kL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZTovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQ6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzOi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsfQ==";' export '_ModuleTable007_;' '_ModuleTable_Sz_="7";' export '_ModuleTable_Sz_;'
+++ COMP=ips
+++ export COMP
+++ __LMOD_REF_COUNT_LOADEDMODULES='EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1;graphics/2.0.0:1;w3nco/2.0.6:1;bufr/11.3.0:1;w3emc/2.3.0:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0:graphics/2.0.0:w3nco/2.0.6:bufr/11.3.0:w3emc/2.3.0
+++ export LOADEDMODULES
+++ MODULEPATH=/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1
+++ export MODULEPATH
+++ W3EMC_INC4=/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/include/w3emc_v2.3.0_4
+++ export W3EMC_INC4
+++ W3EMC_INC8=/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/include/w3emc_v2.3.0_8
+++ export W3EMC_INC8
+++ W3EMC_INCd=/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/include/w3emc_v2.3.0_d
+++ export W3EMC_INCd
+++ W3EMC_LIB4=/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/libw3emc_v2.3.0_4.a
+++ export W3EMC_LIB4
+++ W3EMC_LIB8=/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/libw3emc_v2.3.0_8.a
+++ export W3EMC_LIB8
+++ W3EMC_LIBd=/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/ips/18.0.1/impi/18.0.1/libw3emc_v2.3.0_d.a
+++ export W3EMC_LIBd
+++ W3EMC_SRC=/gpfs/dell1/nco/ops/nwprod/lib/w3emc/v2.3.0/src/libsrc
+++ export W3EMC_SRC
+++ W3EMC_VER=v2.3.0
+++ export W3EMC_VER
+++ __LMOD_REF_COUNT__LMFILES_='/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/w3emc/2.3.0:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/w3emc/2.3.0
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxidWZyPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2Nv
+++ export _ModuleTable001_
+++ _ModuleTable002_=bXBpbGVyX3Byb2QvaXBzLzE4LjAuMS9idWZyLzExLjMuMCIsWyJmdWxsTmFtZSJdPSJidWZyLzExLjMuMCIsWyJsb2FkT3JkZXIiXT04LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImJ1ZnIvMTEuMy4wIix9LGdyYXBoaWNzPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMS9ncmFwaGljcy8yLjAuMCIsWyJmdWxsTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsWyJsb2FkT3JkZXIiXT02LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImdyYXBoaWNzLzIuMC4wIix9LGltcGk9e1si
+++ export _ModuleTable002_
+++ _ModuleTable003_=Zm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMS5sdWEiLFsiZnVsbE5hbWUiXT0iaW1waS8xOC4wLjEiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJpbXBpLzE4LjAuMSIsfSxpcHM9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2lwcy8xOC4wLjEuMTYzIixbImZ1bGxOYW1lIl09Imlwcy8xOC4wLjEuMTYzIixbImxvYWRPcmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaXBzLzE4LjAuMS4xNjMi
+++ export _ModuleTable003_
+++ _ModuleTable004_=LH0sbHNmPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9sc2YvMTAuMSIsWyJmdWxsTmFtZSJdPSJsc2YvMTAuMSIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImxzZi8xMC4xIix9LHByb2RfdXRpbD17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvcHJvZF91dGlsLzEuMS4wIixbImZ1bGxOYW1lIl09InByb2RfdXRpbC8xLjEuMCIsWyJsb2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09
+++ export _ModuleTable004_
+++ _ModuleTable005_=InByb2RfdXRpbC8xLjEuMCIsfSx3M2VtYz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xL3czZW1jLzIuMy4wIixbImZ1bGxOYW1lIl09InczZW1jLzIuMy4wIixbImxvYWRPcmRlciJdPTkscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0idzNlbWMvMi4zLjAiLH0sdzNuY289e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3czbmNvLzIuMC42IixbImZ1bGxOYW1lIl09InczbmNvLzIuMC42IixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJz
+++ export _ModuleTable005_
+++ _ModuleTable006_=dGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0idzNuY28vMi4wLjYiLH0sfSxtcGF0aEE9eyIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2RlZnMiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3RoaXJkL2lwcy8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX21waS9pcHMvMTguMC4xIiwiL3Vz
+++ export _ModuleTable006_
+++ _ModuleTable007_=cngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9tcGlfdGhpcmQvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL21waV9wcm9kL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZTovdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQ6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzOi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvcmVfcHJvZCIsfQ==
+++ export _ModuleTable007_
+++ _ModuleTable_Sz_=7
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load bacio/2.0.2
+++ /usrx/local/prod/lmod/lmod/libexec/lmod bash load bacio/2.0.2
++ eval 'BACIO_LIB4="/gpfs/dell1/nco/ops/nwprod/lib/bacio/v2.0.2/ips/18.0.1/libbacio_v2.0.2_4.a";' export 'BACIO_LIB4;' 'BACIO_LIB8="/gpfs/dell1/nco/ops/nwprod/lib/bacio/v2.0.2/ips/18.0.1/libbacio_v2.0.2_8.a";' export 'BACIO_LIB8;' 'BACIO_SRC="/gpfs/dell1/nco/ops/nwprod/lib/bacio/v2.0.2/src";' export 'BACIO_SRC;' 'BACIO_VER="v2.0.2";' export 'BACIO_VER;' 'COMP="ips";' export 'COMP;' '__LMOD_REF_COUNT_LOADEDMODULES="EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1;graphics/2.0.0:1;w3nco/2.0.6:1;bufr/11.3.0:1;w3emc/2.3.0:1;bacio/2.0.2:1";' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES="EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0:graphics/2.0.0:w3nco/2.0.6:bufr/11.3.0:w3emc/2.3.0:bacio/2.0.2";' export 'LOADEDMODULES;' 'MODULEPATH="/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1";' export 'MODULEPATH;' '__LMOD_REF_COUNT__LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/w3emc/2.3.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bacio/2.0.2:1";' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_="/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/w3emc/2.3.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bacio/2.0.2";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxiYWNpbz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9j";' export '_ModuleTable001_;' '_ModuleTable002_="b21waWxlcl9wcm9kL2lwcy8xOC4wLjEvYmFjaW8vMi4wLjIiLFsiZnVsbE5hbWUiXT0iYmFjaW8vMi4wLjIiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmFjaW8vMi4wLjIiLH0sYnVmcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvYnVmci8xMS4zLjAiLFsiZnVsbE5hbWUiXT0iYnVmci8xMS4zLjAiLFsibG9hZE9yZGVyIl09OCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJidWZyLzExLjMuMCIsfSxncmFwaGljcz17WyJmbiJdPSIv";' export '_ModuleTable002_;' '_ModuleTable003_="Z3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvZ3JhcGhpY3MvMi4wLjAiLFsiZnVsbE5hbWUiXT0iZ3JhcGhpY3MvMi4wLjAiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5h";' export '_ModuleTable003_;' '_ModuleTable004_="bWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAu";' export '_ModuleTable004_;' '_ModuleTable005_="MSIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLH0sdzNlbWM9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvbXBpX3Byb2QvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMS93M2VtYy8yLjMuMCIsWyJmdWxsTmFtZSJdPSJ3M2VtYy8yLjMuMCIsWyJsb2FkT3JkZXIiXT05LHByb3BUPXt9LFsi";' export '_ModuleTable005_;' '_ModuleTable006_="c3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InczZW1jLzIuMy4wIix9LHczbmNvPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMS93M25jby8yLjAuNiIsWyJmdWxsTmFtZSJdPSJ3M25jby8yLjAuNiIsWyJsb2FkT3JkZXIiXT03LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InczbmNvLzIuMC42Iix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9u";' export '_ModuleTable006_;' '_ModuleTable007_="d3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl90aGlyZC9pcHMvMTguMC4xIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2Qv";' export '_ModuleTable007_;' '_ModuleTable008_="bG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmczovZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0=";' export '_ModuleTable008_;' '_ModuleTable_Sz_="8";' export '_ModuleTable_Sz_;'
+++ BACIO_LIB4=/gpfs/dell1/nco/ops/nwprod/lib/bacio/v2.0.2/ips/18.0.1/libbacio_v2.0.2_4.a
+++ export BACIO_LIB4
+++ BACIO_LIB8=/gpfs/dell1/nco/ops/nwprod/lib/bacio/v2.0.2/ips/18.0.1/libbacio_v2.0.2_8.a
+++ export BACIO_LIB8
+++ BACIO_SRC=/gpfs/dell1/nco/ops/nwprod/lib/bacio/v2.0.2/src
+++ export BACIO_SRC
+++ BACIO_VER=v2.0.2
+++ export BACIO_VER
+++ COMP=ips
+++ export COMP
+++ __LMOD_REF_COUNT_LOADEDMODULES='EnvVars/1.0.3:1;lsf/10.1:1;ips/18.0.1.163:1;impi/18.0.1:1;prod_util/1.1.0:1;graphics/2.0.0:1;w3nco/2.0.6:1;bufr/11.3.0:1;w3emc/2.3.0:1;bacio/2.0.2:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=EnvVars/1.0.3:lsf/10.1:ips/18.0.1.163:impi/18.0.1:prod_util/1.1.0:graphics/2.0.0:w3nco/2.0.6:bufr/11.3.0:w3emc/2.3.0:bacio/2.0.2
+++ export LOADEDMODULES
+++ MODULEPATH=/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1
+++ export MODULEPATH
+++ __LMOD_REF_COUNT__LMFILES_='/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/w3emc/2.3.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bacio/2.0.2:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.3:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/graphics/2.0.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.3.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/w3emc/2.3.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bacio/2.0.2
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxiYWNpbz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9j
+++ export _ModuleTable001_
+++ _ModuleTable002_=b21waWxlcl9wcm9kL2lwcy8xOC4wLjEvYmFjaW8vMi4wLjIiLFsiZnVsbE5hbWUiXT0iYmFjaW8vMi4wLjIiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmFjaW8vMi4wLjIiLH0sYnVmcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvYnVmci8xMS4zLjAiLFsiZnVsbE5hbWUiXT0iYnVmci8xMS4zLjAiLFsibG9hZE9yZGVyIl09OCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJidWZyLzExLjMuMCIsfSxncmFwaGljcz17WyJmbiJdPSIv
+++ export _ModuleTable002_
+++ _ModuleTable003_=Z3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvZ3JhcGhpY3MvMi4wLjAiLFsiZnVsbE5hbWUiXT0iZ3JhcGhpY3MvMi4wLjAiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5h
+++ export _ModuleTable003_
+++ _ModuleTable004_=bWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAu
+++ export _ModuleTable004_
+++ _ModuleTable005_=MSIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLH0sdzNlbWM9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvbXBpX3Byb2QvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMS93M2VtYy8yLjMuMCIsWyJmdWxsTmFtZSJdPSJ3M2VtYy8yLjMuMCIsWyJsb2FkT3JkZXIiXT05LHByb3BUPXt9LFsi
+++ export _ModuleTable005_
+++ _ModuleTable006_=c3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InczZW1jLzIuMy4wIix9LHczbmNvPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMS93M25jby8yLjAuNiIsWyJmdWxsTmFtZSJdPSJ3M25jby8yLjAuNiIsWyJsb2FkT3JkZXIiXT03LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InczbmNvLzIuMC42Iix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9u
+++ export _ModuleTable006_
+++ _ModuleTable007_=d3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl90aGlyZC9pcHMvMTguMC4xIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2Qv
+++ export _ModuleTable007_
+++ _ModuleTable008_=bG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmczovZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0=
+++ export _ModuleTable008_
+++ _ModuleTable_Sz_=8
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module list
+++ /usrx/local/prod/lmod/lmod/libexec/lmod bash list
+
+Currently Loaded Modules:
+  1) EnvVars/1.0.3   3) ips/18.0.1.163   5) prod_util/1.1.0   7) w3nco/2.0.6   9) w3emc/2.3.0
+  2) lsf/10.1        4) impi/18.0.1      6) graphics/2.0.0    8) bufr/11.3.0  10) bacio/2.0.2
+
+ 
+
++ eval 'MODULEPATH="/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1";' export 'MODULEPATH;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxiYWNpbz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9j";' export '_ModuleTable001_;' '_ModuleTable002_="b21waWxlcl9wcm9kL2lwcy8xOC4wLjEvYmFjaW8vMi4wLjIiLFsiZnVsbE5hbWUiXT0iYmFjaW8vMi4wLjIiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmFjaW8vMi4wLjIiLH0sYnVmcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvYnVmci8xMS4zLjAiLFsiZnVsbE5hbWUiXT0iYnVmci8xMS4zLjAiLFsibG9hZE9yZGVyIl09OCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJidWZyLzExLjMuMCIsfSxncmFwaGljcz17WyJmbiJdPSIv";' export '_ModuleTable002_;' '_ModuleTable003_="Z3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvZ3JhcGhpY3MvMi4wLjAiLFsiZnVsbE5hbWUiXT0iZ3JhcGhpY3MvMi4wLjAiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5h";' export '_ModuleTable003_;' '_ModuleTable004_="bWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAu";' export '_ModuleTable004_;' '_ModuleTable005_="MSIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLH0sdzNlbWM9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvbXBpX3Byb2QvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMS93M2VtYy8yLjMuMCIsWyJmdWxsTmFtZSJdPSJ3M2VtYy8yLjMuMCIsWyJsb2FkT3JkZXIiXT05LHByb3BUPXt9LFsi";' export '_ModuleTable005_;' '_ModuleTable006_="c3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InczZW1jLzIuMy4wIix9LHczbmNvPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMS93M25jby8yLjAuNiIsWyJmdWxsTmFtZSJdPSJ3M25jby8yLjAuNiIsWyJsb2FkT3JkZXIiXT03LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InczbmNvLzIuMC42Iix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9u";' export '_ModuleTable006_;' '_ModuleTable007_="d3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl90aGlyZC9pcHMvMTguMC4xIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2Qv";' export '_ModuleTable007_;' '_ModuleTable008_="bG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmczovZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0=";' export '_ModuleTable008_;' '_ModuleTable_Sz_="8";' export '_ModuleTable_Sz_;'
+++ MODULEPATH=/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1
+++ export MODULEPATH
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMyIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4zIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMyIsfSxiYWNpbz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9j
+++ export _ModuleTable001_
+++ _ModuleTable002_=b21waWxlcl9wcm9kL2lwcy8xOC4wLjEvYmFjaW8vMi4wLjIiLFsiZnVsbE5hbWUiXT0iYmFjaW8vMi4wLjIiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmFjaW8vMi4wLjIiLH0sYnVmcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvYnVmci8xMS4zLjAiLFsiZnVsbE5hbWUiXT0iYnVmci8xMS4zLjAiLFsibG9hZE9yZGVyIl09OCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJidWZyLzExLjMuMCIsfSxncmFwaGljcz17WyJmbiJdPSIv
+++ export _ModuleTable002_
+++ _ModuleTable003_=Z3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvZ3JhcGhpY3MvMi4wLjAiLFsiZnVsbE5hbWUiXT0iZ3JhcGhpY3MvMi4wLjAiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJncmFwaGljcy8yLjAuMCIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5h
+++ export _ModuleTable003_
+++ _ModuleTable004_=bWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsc2YvMTAu
+++ export _ModuleTable004_
+++ _ModuleTable005_=MSIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLH0sdzNlbWM9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvbXBpX3Byb2QvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMS93M2VtYy8yLjMuMCIsWyJmdWxsTmFtZSJdPSJ3M2VtYy8yLjMuMCIsWyJsb2FkT3JkZXIiXT05LHByb3BUPXt9LFsi
+++ export _ModuleTable005_
+++ _ModuleTable006_=c3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InczZW1jLzIuMy4wIix9LHczbmNvPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMS93M25jby8yLjAuNiIsWyJmdWxsTmFtZSJdPSJ3M25jby8yLjAuNiIsWyJsb2FkT3JkZXIiXT03LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InczbmNvLzIuMC42Iix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9u
+++ export _ModuleTable006_
+++ _ModuleTable007_=d3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl90aGlyZC9pcHMvMTguMC4xIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2Qv
+++ export _ModuleTable007_
+++ _ModuleTable008_=bG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmczovZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0=
+++ export _ModuleTable008_
+++ _ModuleTable_Sz_=8
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ mkdir -p -m 775 ../exec
+++ ls -1d archqm.fd datarch.fd marine_stats_eomqm.fd marine_stats_genak.fd marine_stats_genall.fd marine_stats_geniss.fd marine_stats_genstx.fd marine_stats_newstats.fd marine_stats_rmslash.fd
++ for dir in '`ls -1d *.fd`'
++ echo archqm.fd
+archqm.fd
++ cd archqm.fd
++ make -f makefile makefile.org
+make: Nothing to be done for `makefile.org'.
+++ echo archqm.fd
+++ cut -f1 -d.
++ exec=archqm
++ echo 'mv archqm ../../exec/'
+mv archqm ../../exec/
++ mv archqm ../../exec/
++ make -f makefile makefile.org clean
+make: Nothing to be done for `makefile.org'.
+rm -f archqm.o
++ cd ..
++ for dir in '`ls -1d *.fd`'
++ echo datarch.fd
+datarch.fd
++ cd datarch.fd
++ make -f makefile makefile.org
+make: Nothing to be done for `makefile.org'.
+++ echo datarch.fd
+++ cut -f1 -d.
++ exec=datarch
++ echo 'mv datarch ../../exec/'
+mv datarch ../../exec/
++ mv datarch ../../exec/
++ make -f makefile makefile.org clean
+make: Nothing to be done for `makefile.org'.
+rm -f datarch.o 
++ cd ..
++ for dir in '`ls -1d *.fd`'
++ echo marine_stats_eomqm.fd
+marine_stats_eomqm.fd
++ cd marine_stats_eomqm.fd
++ make -f makefile makefile.org
+make: Nothing to be done for `makefile.org'.
+++ echo marine_stats_eomqm.fd
+++ cut -f1 -d.
++ exec=marine_stats_eomqm
++ echo 'mv marine_stats_eomqm ../../exec/'
+mv marine_stats_eomqm ../../exec/
++ mv marine_stats_eomqm ../../exec/
++ make -f makefile makefile.org clean
+make: Nothing to be done for `makefile.org'.
+rm -f eomqm.o 
++ cd ..
++ for dir in '`ls -1d *.fd`'
++ echo marine_stats_genak.fd
+marine_stats_genak.fd
++ cd marine_stats_genak.fd
++ make -f makefile makefile.org
+make: Nothing to be done for `makefile.org'.
+++ echo marine_stats_genak.fd
+++ cut -f1 -d.
++ exec=marine_stats_genak
++ echo 'mv marine_stats_genak ../../exec/'
+mv marine_stats_genak ../../exec/
++ mv marine_stats_genak ../../exec/
++ make -f makefile makefile.org clean
+make: Nothing to be done for `makefile.org'.
+rm -f genak.o 
++ cd ..
++ for dir in '`ls -1d *.fd`'
++ echo marine_stats_genall.fd
+marine_stats_genall.fd
++ cd marine_stats_genall.fd
++ make -f makefile makefile.org
+make: Nothing to be done for `makefile.org'.
+++ echo marine_stats_genall.fd
+++ cut -f1 -d.
++ exec=marine_stats_genall
++ echo 'mv marine_stats_genall ../../exec/'
+mv marine_stats_genall ../../exec/
++ mv marine_stats_genall ../../exec/
++ make -f makefile makefile.org clean
+make: Nothing to be done for `makefile.org'.
+rm -f genall.o 
++ cd ..
++ for dir in '`ls -1d *.fd`'
++ echo marine_stats_geniss.fd
+marine_stats_geniss.fd
++ cd marine_stats_geniss.fd
++ make -f makefile makefile.org
+make: Nothing to be done for `makefile.org'.
+++ echo marine_stats_geniss.fd
+++ cut -f1 -d.
++ exec=marine_stats_geniss
++ echo 'mv marine_stats_geniss ../../exec/'
+mv marine_stats_geniss ../../exec/
++ mv marine_stats_geniss ../../exec/
++ make -f makefile makefile.org clean
+make: Nothing to be done for `makefile.org'.
+rm -f geniss.o 
++ cd ..
++ for dir in '`ls -1d *.fd`'
++ echo marine_stats_genstx.fd
+marine_stats_genstx.fd
++ cd marine_stats_genstx.fd
++ make -f makefile
+make: Nothing to be done for `all'.
+++ echo marine_stats_genstx.fd
+++ cut -f1 -d.
++ exec=marine_stats_genstx
++ echo 'mv marine_stats_genstx ../../exec/'
+mv marine_stats_genstx ../../exec/
++ mv marine_stats_genstx ../../exec/
++ make -f makefile clean
+rm -f genstx.o 
++ cd ..
++ for dir in '`ls -1d *.fd`'
++ echo marine_stats_newstats.fd
+marine_stats_newstats.fd
++ cd marine_stats_newstats.fd
++ make -f makefile makefile.org
+make: Nothing to be done for `makefile.org'.
+++ echo marine_stats_newstats.fd
+++ cut -f1 -d.
++ exec=marine_stats_newstats
++ echo 'mv marine_stats_newstats ../../exec/'
+mv marine_stats_newstats ../../exec/
++ mv marine_stats_newstats ../../exec/
++ make -f makefile makefile.org clean
+make: Nothing to be done for `makefile.org'.
+rm -f newstats.o 
++ cd ..
++ for dir in '`ls -1d *.fd`'
++ echo marine_stats_rmslash.fd
+marine_stats_rmslash.fd
++ cd marine_stats_rmslash.fd
++ make -f makefile
+make: Nothing to be done for `all'.
+++ echo marine_stats_rmslash.fd
+++ cut -f1 -d.
++ exec=marine_stats_rmslash
++ echo 'mv marine_stats_rmslash ../../exec/'
+mv marine_stats_rmslash ../../exec/
++ mv marine_stats_rmslash ../../exec/
++ make -f makefile clean
+rm -f rmslash.o 
++ cd ..

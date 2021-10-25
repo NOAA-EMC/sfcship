@@ -1,0 +1,139 @@
+#!/bin/bash
+set -xa
+date -u
+
+###################################################################
+# Set DEBUG LEVEL - modifies info in execution trace prompt string
+###################################################################
+export DEBUG_LEVEL=${DEBUG_LEVEL=1}
+case $DEBUG_LEVEL in
+  1) export PS4='+ ${SECONDS}s + ' ;;       # add seconds (this is typical case)
+  0) export PS4='+ ';;                      # don't include seconds (useful if
+                                            #  want to diff output from 2 runs)
+  2) export PS4='+ ${SECONDS}s:L$LINENO + ';;         # add script line #
+  3) export PS4='+ ${SECONDS}s:${0##*/}:L$LINENO + ';;# add script name & line #
+  4) export PS4='+ ${0##*/}:L$LINENO + ';;  # script name & line (no seconds)
+  *) echo "Unrecognized DEBUG_LEVEL.  Stay with current PS4 setting";;
+esac
+
+########################################
+# Check that required variables are set
+########################################
+set +x
+echo
+echo cyc is ${cyc:?"###FATAL ERROR \"cyc\" is not set"}
+echo envir is ${envir:?"###FATAL ERROR \"envir\" is not set"}
+echo job is ${job:?"###FATAL ERROR \"job\" is not set"}
+echo DATAROOT is ${DATAROOT:?"###FATAL ERROR \"DATAROOT\" is not set"}
+echo
+set -x
+
+######################
+# Specify NET and RUN
+######################
+export NET=${NET:-sfcship}
+export RUN=${RUN:-sfcship} 
+set +x
+echo
+echo NET is ${NET:?"###FATAL ERROR \"NET\" is not set"}
+echo RUN is ${RUN:?"###FATAL ERROR \"RUN\" is not set"}
+echo
+set -x
+
+##############################
+# Specify cycle and time-mark
+##############################
+export cycle=t${cyc}z
+
+###################################
+# obtain unique process id (pid) and make temp directory
+####################################
+export pid=$$
+
+####################################
+# Determine Job Output Name on System
+####################################
+export outid="$job"
+export jobid="${outid}.o${pid}"
+export pgmout="OUTPUT.${pid}"
+export pgmerr=errfile
+
+###############################
+# Create new working directory
+###############################
+export DATA=${DATA:-$DATAROOT/${jobid}}
+rm -rf $DATA
+mkdir -p $DATA
+cd $DATA
+
+######################################
+# Set job log file for postmsg output
+######################################
+export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
+
+########################################################
+# SENDCOM      - Copy files to $COMOUT directory
+# SENDECF      - Flag Events on ECFLOW
+# SENDDBN      - Alert output file to TOC
+########################################################
+export SENDCOM=${SENDCOM:-YES}
+export SENDECF=${SENDECF:-YES}
+export SENDDBN=${SENDDBN:-YES}
+
+##########################
+# Specify Execution Areas
+##########################
+export HOMEsfcship=${HOMEsfcship:-${NWROOT}/sfcship.${sfcship_ver}}
+export EXECsfcship=${HOMEsfcship}/exec
+export USHsfcship=${HOMEsfcship}/ush
+
+export HOMEgraph=${HOMEsfcship}/util
+export EXECgraph=$HOMEgraph/exec
+export PARMgraph=$HOMEgraph/parm
+export FIXgraph=$HOMEgraph/fix
+export USHgraph=$HOMEgraph/ush
+
+##########################################
+# Run setpdy and initialize PDY variables
+##########################################
+setpdy.sh
+. ./PDY
+
+#########################
+# Define COM directories
+#########################
+export COMIN=${COMIN:-${COMROOT}/${NET}/${envir}/VOS}
+export COMOUT=${COMOUT:-${COMROOT}/${NET}/${envir}/VOS}
+mkdir -p $COMOUT
+
+#########################################################
+# Specify variables specific to this execution of script
+#########################################################
+export PROCESS_MASTER_SHIP_STNLST=${PROCESS_MASTER_SHIP_STNLST:-YES}
+if [ $PROCESS_MASTER_SHIP_STNLST == YES ]; then
+   export DCOMROOT=${DCOMROOT:-/gpfs/dell1/nco/ops/dcom}
+   export SHPNAMDIR_DCOM=${SHPNAMDIR:-${DCOMROOT}/prod/ndbc}
+   export VOSarch_IN=${VOSarch_IN:-${COMROOT?}/${NET}/${envir}/VOS}
+   export VOSarch_OUT=${VOSarch_OUT:-${COMROOT?}/${NET}/${envir}/VOS}
+   mkdir -m 755 $VOSarch_OUT
+else
+   echo "WARNING: PROCESS_MASTER_SHIP_STNLST=$PROCESS_MASTER_SHIP_STNLST, exiting...."
+   date
+   exit
+fi 
+
+env
+
+#############################################################
+# Execute the script
+#############################################################
+$HOMEsfcship/scripts/exship_names.sh.ecf
+export err=$?; err_chk;
+
+#############################################################
+if [ "$KEEPDATA" != YES ]; then
+   cd $DATAROOT
+   rm -rf $DATA
+fi
+#############################################################
+date

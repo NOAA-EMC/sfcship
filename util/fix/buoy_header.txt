@@ -1,0 +1,36 @@
+All statistics are for data with gross errors excluded.  Gross error
+limits for observations compared to NCEP first guess and analysis
+fields are as follows:
+
+AP:  15.0 mb
+AT:  15.0 degrees Celsius
+WD:  100 degrees
+WS:  15.0 m/s
+SST:  5.0 degrees Celsius
+WV:  25.0 m/s
+
+                      Explanation of fields:
+
+Date####: Last day for the monthly statistics
+WMO##   : WMO number of buoy or Ship's Call Sign
+Sns     : Sensor Name :
+          AP (Pressure), AT (Air Temp), SST (Sea Surf Temp), WS (Wind Sp),
+          WD (Wind Dir), WV (Wind vector), APT (Tendency), HUM (Humidity),
+          TD (Dew Point).
+Orig    : GTS Origin of the data (ALL or cccc from GTS Bulletin header)
+C       : GTS code (B: BUOY, S:SHIP, Y:SYNOP)
+Cntr#   : Monitoring Center producing the stats (e.g. ECMWF, UKMO, NCO, CMM)
+Lat##   : Last Latitude of buoy/ship during the month
+Long##  : Last Longitude of buoy/ship during the month
+Rcei    : Total number of obs received at the center including obs not used
+Acpt    : Total number of obs accepted by the model
+GE#     : Number of Gross Errors (i.e. number of (Obs-Field) exceeding limits))
+Bias#   : Mean Bias (Obs-Field)
+SD##    : Standard Deviation, SD = RMS (Obs-Field-Bias);
+          For Wind Vectors (WV), by convention, SD = RMS(WS/Rate - Field)
+RMS#    : Root Mean Square, RMS = RMS (Obs-Field);
+          For Wind Vectors (WV), by convention, RMS=RMS(SQRT(Vec(WV-Field)**2))
+Rate    : Mean (Obs/Field)
+F       : Flag for Field used : A=Analysis, G=First Guess, B=Both
+
+

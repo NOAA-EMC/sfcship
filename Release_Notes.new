@@ -1,0 +1,69 @@
+Release Notes: raws.v1.0.0   Released to NCO on October 30, 2019
+
+  . Transition from Tide/Gyre Phase 1 to Venus/Mars
+
+  . Purpose: Provide reports for OPC
+
+  . Checkout from https://github.com/EricRogers-NOAA/RAWSv1
+                            jobs
+                            r_job_wrapper
+                            scriptes
+                            sorc
+                            util/ush
+                            Release_Notes
+
+  . First implementation of the New RAW's generating output for OPC
+
+  . Codes found in directory (Mars/Venus)  /sss/emc/meso/shared/Steven.Lilly/dell/implement/raws.v1.0.0 
+      * jobs - JRW1 JRW2 JRW3 JRW4 JRW5 (JRWO / JRW1.noalert are no longer require )
+
+      * scripts - exrw1.sh.ecf exrw2.sh.ecf  exrw3.sh.ecf
+                  exrw4.sh.ecf exrw5.sh.ecf (exrw0.sh is no longer require)
+
+      * util/ush - exrdshpmpc.sh
+
+      * sorc - build.scr
+             - hrly_rdshppc.fd ( makefile rdshpmpc.f )
+
+
+  . Changes to "jobs codes" - add logic: export SENDECF=${SENDECF:-YES}
+                            - a r_job_wrapper preceeds the job ( contains all load 
+                              modules and logic require to execute the job )
+
+
+  . Changes to "scripts codes" - legacy products remove; only generate output for OPC
+
+
+  . No changes to input data - shpall group 001.001
+                               dbuoy  group 001.002
+                               mbuoy  group 001.003
+                               lcman  group 001.004
+                               tideg  group 001.005
+
+
+  . Output data: No longer written to "pcom"
+   new location on Phase3(DELL - suggested by DataFlow): 
+                            comout=" /gpfs/dell1/nco/ops/hourly/prod/qap.hourly "
+
+
+  . Flow patern:
+
+      r_job_wrapper -> jobs   ->     scripts    ->    util/ush
+ 
+         r_jrw1        JRW1       exrw1.sh.ecf      exrdshpmpc.sh
+         r_jrw2        JRW2       exrw2.sh.ecf      exrdshpmpc.sh
+         r_jrw3        JRW3       exrw3.sh.ecf      exrdshpmpc.sh
+         r_jrw4        JRW4       exrw4.sh.ecf      exrdshpmpc.sh
+         r_jrw5        JRW5       exrw5.sh.ecf      exrdshpmpc.sh
+
+  . Run times: hourly - 20min past the hour
+        Phase3(DELL) JRW1 is the same as Phase2(CURRENT PRODUCTION) JRW1 (single task,share)
+        Phase3(DELL) JRW2 is the same as Phase2(CURRENT PRODUCTION) JRW2 (single task,share)
+        Phase3(DELL) JRW3 is the same as Phase2(CURRENT PRODUCTION) JRW3 (single task,share)
+        Phase3(DELL) JRW4 is the same as Phase2(CURRENT PRODUCTION) JRW4 (single task,share)
+        Phase3(DELL) JRW5 is the same as Phase2(CURRENT PRODUCTION) JRW5 (single task,share)
+
+  . Resource Statistics:
+       Phase3(DELL) runs are similar to Phase2(CURRENT PRODUCTION)
+       run completion 3-5 mins.
+
