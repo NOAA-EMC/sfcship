@@ -11,7 +11,8 @@ date
 # obtain unique process id (pid) and make temp directory
 ####################################
 export pid=$$
-
+export outid="LL$job"
+export jobid="${outid}.o${pid}"
 export DATA=${DATAROOT:?}/${jobid:?}
 export TMPDIR=$DATA
 mkdir $DATA
@@ -46,15 +47,16 @@ export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
 ####################################
 # Determine Job Output Name on System
 ####################################
-export outid="LL$job"
-export jobid="${outid}.o${pid}"
+#export outid="LL$job"
+#export jobid="${outid}.o${pid}"
 export pgmout="OUTPUT.${pid}"
 export pgmerr=errfile
 
 ####################################
 # Specify Execution Areas
 ####################################
-export HOMEsfcship=${HOMEsfcship:-${NWROOT}/sfcship.${sfcship_ver}}
+#export HOMEsfcship=${HOMEsfcship:-${NWROOT}/sfcship.${sfcship_ver}}
+export HOMEsfcship=${HOMEsfcship:-${NWROOT}}
 export EXECsfcship=${HOMEsfcship}/exec
 export USHgraph=${HOMEsfcship}/util/ush
 
