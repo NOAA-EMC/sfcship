@@ -13,7 +13,8 @@ OBJS=	rdshpmpc.o
 # CMD		Name of the executable
 # PROFLIB	Library needed for profiling
 #
-FC =          ifort
+#FC =          ifort
+FC =          ftn
 LDFLAGS =	
 LIBS =	    ${W3NCO_LIB8} ${BUFR_LIB8}
 CMD =		hrly_rdshpmpc
