@@ -52,7 +52,7 @@ export SENDECF=${SENDECF:-YES}
 ####################################
 # Specify Execution Areas
 ####################################
-export HOMEsfcship=${HOMEsfcship:-${NWROOT}/sfcship.${sfcship_ver}}
+export HOMEsfcship=${HOMEsfcship:-${NWROOT}}
 export EXECsfcship=${HOMEsfcship}/exec
 
 export HOMEgraph=${HOMEsfcship}/util
