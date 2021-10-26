@@ -7,7 +7,7 @@ SRCS=	genall.f
 # Tunable parameters
 #
 #
-FC =		ifort
+FC =		ftn
 LDFLAGS =	
 #LIBS =		-L/nwprod/lib -lw3nco_8	
 LIBS =		${W3NCO_LIB8}
