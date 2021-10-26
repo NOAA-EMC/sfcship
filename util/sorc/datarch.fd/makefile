@@ -13,11 +13,12 @@ SRCS=	datarch.f
 # CMD		Name of the executable
 # PROFLIB	Library needed for profiling
 #
-FC =	        ifort 
+FC =	        ftn 
 LDFLAGS =	
 #LIBS = -L/nwprod/lib/graphics -lgph_8 -lutil \
 #	-L/nwprod/lib -lw3emc_8 -lw3nco_8 -lbacio_8 -lbufr_8_64 
 LIBS =  ${GPH_LIB8} ${UTIL_LIB} ${W3EMC_LIB8} ${W3NCO_LIB8} ${BACIO_LIB8} ${BUFR_LIB8}
+#LIBS =  ${W3EMC_LIB8} ${W3NCO_LIB8} ${BACIO_LIB8} ${BUFR_LIB8}
 CMD =		datarch
 PROFLIB =	-lprof
 
