@@ -10,9 +10,12 @@ Release Notes: sfcship.v1.1.3  Released to NCO on November 1, 2021
 
   . Checkout from https://github.com/EricRogers-NOAA/RAWSv1
                             jobs
+                            parm
                             r_job_wrapper
                             scripts
                             sorc
+                            ush
+                            versions
                             util/ush
                             Release_Notes
 
