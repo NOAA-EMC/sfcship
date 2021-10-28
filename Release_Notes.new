@@ -8,7 +8,7 @@ Release Notes: sfcship.v1.1.3  Released to NCO on November 1, 2021
 
 . Purpose: Provide reports for OPC
 
-  . Checkout from https://github.com/EricRogers-NOAA/RAWSv1
+  . Checkout from https://github.com/NOAA-EMC/sfcship/tree/develop
                             jobs
                             parm
                             r_job_wrapper
