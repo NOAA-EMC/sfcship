@@ -1,7 +1,10 @@
 Release Notes: sfcship.v1.1.3  Released to NCO on November 1, 2021
    Transition to WCOSS2
     - minor changes required for new platform
-       (list files)
+       util/archqm.fd/archqm.f
+       util/datarch.fd/datarch.f
+       util/sorc/archqm.fd/archqm.f
+       util/sorc/datarch.fd/datarch.f
 
 . Purpose: Provide reports for OPC
 
