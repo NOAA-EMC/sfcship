@@ -118,3 +118,52 @@ Release Notes: raws.v1.0.0   Released to NCO on October 30, 2019
        Phase3(DELL) runs are similar to Phase2(CURRENT PRODUCTION)
        run completion 3-5 mins.
 
+
+Release Notes: raws.v1.0.0   Released to NCO on October 10, 2019
+
+  . Transition from Tide/Gyre Phase 1 to Venus/Mars
+
+  . First implementation of the RAW's generating output for OPC
+
+  . Codes found in directory raws.v1.0.0 ( /sss/emc/meso/shared/Steven.Lilly/dell/implement/raws.v1.0.0 )
+      * jobs - JRW1 JRW2 JRW3 JRW4 JRW5
+
+      * scripts - exrw1.sh.ecf exrw2.sh.ecf  exrw3.sh.ecf
+                  exrw4.sh.ecf exrw5.sh.ecf 
+
+      * util/ush - exrdshpmpc.sh
+
+      * sorc - build.scr
+             - hrly_rdshppc.fd ( makefile rdshpmpc.f )
+
+
+  . Changes to "jobs codes" - add logic: export SENDECF=${SENDECF:-YES}
+                            - a r_job_wrapper preceeds the job ( contains all load 
+                              modules and logic require to execute the job )
+
+
+  . Changes to "scripts codes" - legacy products remove; only generate output for OPC
+
+
+  . No changes to input data - shpall group 001.001
+                               dbuoy  group 001.002
+                               mbuoy  group 001.003
+                               lcman  group 001.004
+                               tideg  group 001.005
+
+
+  . No chages to output data other than its location - new location could be 
+                            comout=" /gpfs/dell1/nco/ops/hourly/prod/qap.hourly "
+
+
+  . Flow patern:
+
+      r_job_wrapper -> jobs   ->     scripts    ->    util/ush
+ 
+         r_jrw1        JRW1       exrw1.sh.ecf      exrdshpmpc.sh
+         r_jrw2        JRW2       exrw2.sh.ecf      exrdshpmpc.sh
+         r_jrw3        JRW3       exrw3.sh.ecf      exrdshpmpc.sh
+         r_jrw4        JRW4       exrw4.sh.ecf      exrdshpmpc.sh
+         r_jrw5        JRW5       exrw5.sh.ecf      exrdshpmpc.sh
+
+
