@@ -243,7 +243,7 @@ C-----------------------------------------------------------------------
  1007   FORMAT(///5X,'***** DATARCH COMPLETED EXECUTION *****')
         endmsg = errmsg(1)
       endif
-      call consol(endmsg)
+C      call consol(endmsg)
       call w3tage('DATARCH')
       call errexit(iexit)
       call w3tage('DATARCH')
