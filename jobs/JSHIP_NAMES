@@ -83,8 +83,7 @@ export SENDDBN=${SENDDBN:-YES}
 ##########################
 # Specify Execution Areas
 ##########################
-#export HOMEsfcship=${HOMEsfcship:-${NWROOT}/sfcship.${sfcship_ver}}
-export HOMEsfcship=${HOMEsfcship:-${NWROOT}}
+export HOMEsfcship=${HOMEsfcship:-${PACKAGEROOT}}
 export EXECsfcship=${HOMEsfcship}/exec
 export USHsfcship=${HOMEsfcship}/ush
 
@@ -112,7 +111,7 @@ mkdir -p $COMOUT
 #########################################################
 export PROCESS_MASTER_SHIP_STNLST=${PROCESS_MASTER_SHIP_STNLST:-YES}
 if [ $PROCESS_MASTER_SHIP_STNLST == YES ]; then
-   export DCOMROOT=${DCOMROOT:-/gpfs/dell1/nco/ops/dcom}
+   export DCOMROOT=${DCOMROOT:-/lfs/h1/ops/prod/dcom}
    export SHPNAMDIR_DCOM=${SHPNAMDIR:-${DCOMROOT}/prod/ndbc}
    export VOSarch_IN=${VOSarch_IN:-${COMROOT?}/${NET}/${envir}/VOS}
    export VOSarch_OUT=${VOSarch_OUT:-${COMROOT?}/${NET}/${envir}/VOS}
