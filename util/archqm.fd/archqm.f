@@ -330,7 +330,7 @@ C----------------------------------------------------------------------|
         endmsg = errmsg(1)
       endif
                                                                                 
-      call consol(endmsg)
+C      call consol(endmsg)
       call w3tage('ARCHQM')
       call errexit(iexit)
       call w3tage('ARCHQM')
