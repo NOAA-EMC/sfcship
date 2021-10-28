@@ -52,8 +52,7 @@ export pgmerr=errfile
 ####################################
 # Specify Execution Areas
 ####################################
-#export HOMEsfcship=${HOMEsfcship:-${NWROOT}/sfcship.${sfcship_ver}}
-export HOMEsfcship=${HOMEsfcship:-${NWROOT}}
+export HOMEsfcship=${HOMEsfcship:-${PACKAGEROOT}}
 export EXECsfcship=${HOMEsfcship}/exec
 export USHgraph=${HOMEsfcship}/util/ush
 
