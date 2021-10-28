@@ -1,6 +1,8 @@
 set -ax
-#module load graphics/2.0.0
-module load bufr/11.4.0
-module load w3nco/2.4.1
+export VERROOT=/lfs/h2/emc/obsproc/noscrub/Steve.Stegall/githubwkspc/sfcship/versions
+. ${VERROOT}/build.ver
+
+module load w3nco/${w3nco_ver:?}
+module load bufr/${bufr_ver:?}
 module list
 make
