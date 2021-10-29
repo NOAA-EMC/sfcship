@@ -1,5 +1,6 @@
 set -ax
-export VERROOT=/lfs/h2/emc/obsproc/noscrub/Steve.Stegall/githubwkspc/sfcship/versions
+
+export VERROOT=${VERROOT:-${PACKAGEROOT}/sfcship.${sfcship_ver}/versions}
 . ${VERROOT}/build.ver
 
 module load w3nco/${w3nco_ver:?}
