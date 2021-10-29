@@ -83,7 +83,7 @@ export SENDDBN=${SENDDBN:-YES}
 ##########################
 # Specify Execution Areas
 ##########################
-export HOMEsfcship=${HOMEsfcship:-${PACKAGEROOT}}
+export HOMEsfcship=${HOMEsfcship:-${PACKAGEROOT}/sfcship.${sfcship_ver}}
 export EXECsfcship=${HOMEsfcship}/exec
 export USHsfcship=${HOMEsfcship}/ush
 
@@ -102,8 +102,8 @@ setpdy.sh
 #########################
 # Define COM directories
 #########################
-export COMIN=${COMIN:-${COMROOT}/${NET}/${envir}/VOS}
-export COMOUT=${COMOUT:-${COMROOT}/${NET}/${envir}/VOS}
+export COMIN=${COMIN:-${COMROOT}/${NET}/${ver}/VOS}
+export COMOUT=${COMOUT:-${COMROOT}/${NET}/${ver}/VOS}
 mkdir -p $COMOUT
 
 #########################################################
@@ -113,8 +113,8 @@ export PROCESS_MASTER_SHIP_STNLST=${PROCESS_MASTER_SHIP_STNLST:-YES}
 if [ $PROCESS_MASTER_SHIP_STNLST == YES ]; then
    export DCOMROOT=${DCOMROOT:-/lfs/h1/ops/prod/dcom}
    export SHPNAMDIR_DCOM=${SHPNAMDIR:-${DCOMROOT}/prod/ndbc}
-   export VOSarch_IN=${VOSarch_IN:-${COMROOT?}/${NET}/${envir}/VOS}
-   export VOSarch_OUT=${VOSarch_OUT:-${COMROOT?}/${NET}/${envir}/VOS}
+   export VOSarch_IN=${VOSarch_IN:-${COMROOT?}/${NET}/${ver}/VOS}
+   export VOSarch_OUT=${VOSarch_OUT:-${COMROOT?}/${NET}/${ver}/VOS}
    mkdir -m 755 $VOSarch_OUT
 else
    echo "WARNING: PROCESS_MASTER_SHIP_STNLST=$PROCESS_MASTER_SHIP_STNLST, exiting...."
