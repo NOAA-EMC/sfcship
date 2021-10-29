@@ -112,7 +112,7 @@ mkdir -p $COMOUT
 export PROCESS_MASTER_SHIP_STNLST=${PROCESS_MASTER_SHIP_STNLST:-YES}
 if [ $PROCESS_MASTER_SHIP_STNLST == YES ]; then
    export DCOMROOT=${DCOMROOT:-/lfs/h1/ops/prod/dcom}
-   export SHPNAMDIR_DCOM=${SHPNAMDIR:-${DCOMROOT}/prod/ndbc}
+   export SHPNAMDIR_DCOM=${SHPNAMDIR:-${DCOMROOT}/ndbc}
    export VOSarch_IN=${VOSarch_IN:-${COMROOT?}/${NET}/${ver}/VOS}
    export VOSarch_OUT=${VOSarch_OUT:-${COMROOT?}/${NET}/${ver}/VOS}
    mkdir -m 755 $VOSarch_OUT
