@@ -5,8 +5,9 @@ module load craype/2.7.8
 module load intel/19.1.3.304
 module load cray-mpich/8.1.4
 
-export VERROOT=/lfs/h2/emc/obsproc/noscrub/Steve.Stegall/githubwkspc/sfcship/versions
+export VERROOT=${VERROOT:-${PACKAGEROOT}/sfcship.${sfcship_ver}/versions}
 . ${VERROOT}/build.ver
+
 
 module load w3nco/${w3nco_ver:?}
 module load bufr/${bufr_ver:?}
