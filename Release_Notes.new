@@ -1,14 +1,10 @@
 Release Notes: sfcship.v1.1.3  Released to NCO on November 1, 2021
-   Transition to WCOSS2
-    - minor changes required for new platform
-       util/archqm.fd/archqm.f
-       util/datarch.fd/datarch.f
-       util/sorc/archqm.fd/archqm.f
-       util/sorc/datarch.fd/datarch.f
+
+. Transition from WCOSS ph3 to WCOSS2
 
 . Purpose: Provide reports for OPC
 
-  . Checkout from https://github.com/NOAA-EMC/sfcship/tree/develop
+. Checkout from https://github.com/NOAA-EMC/sfcship/tree/develop
                             jobs
                             parm
                             r_job_wrapper
@@ -18,34 +14,6 @@ Release Notes: sfcship.v1.1.3  Released to NCO on November 1, 2021
                             versions
                             util/ush
                             Release_Notes
-
-  . First implementation of the New RAW's generating output for OPC
-
-  . Codes found in directory (Mars/Venus)  /sss/emc/meso/shared/Steven.Lilly/dell/implement/raws.v1.0.0 
-      * jobs - JRW1 JRW2 JRW3 JRW4 JRW5 (JRWO / JRW1.noalert are no longer require )
-
-      * scripts - exrw1.sh.ecf exrw2.sh.ecf  exrw3.sh.ecf
-                  exrw4.sh.ecf exrw5.sh.ecf (exrw0.sh is no longer require)
-
-      * util/ush - exrdshpmpc.sh
-
-      * sorc - build.scr
-             - hrly_rdshppc.fd ( makefile rdshpmpc.f )
-
-
-  . Changes to "jobs codes" - add logic: export SENDECF=${SENDECF:-YES}
-                            - a r_job_wrapper preceeds the job ( contains all load 
-                              modules and logic require to execute the job )
-
-
-  . Changes to "scripts codes" - legacy products remove; only generate output for OPC
-
-
-  . No changes to input data - shpall group 001.001
-                               dbuoy  group 001.002
-                               mbuoy  group 001.003
-                               lcman  group 001.004
-                               tideg  group 001.005
 
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -118,7 +86,7 @@ Release Notes: raws.v1.0.0   Released to NCO on October 30, 2019
        Phase3(DELL) runs are similar to Phase2(CURRENT PRODUCTION)
        run completion 3-5 mins.
 
-
+---------------------------------------------------------------------------------------------------------------------
 Release Notes: raws.v1.0.0   Released to NCO on October 10, 2019
 
   . Transition from Tide/Gyre Phase 1 to Venus/Mars
@@ -165,5 +133,3 @@ Release Notes: raws.v1.0.0   Released to NCO on October 10, 2019
          r_jrw3        JRW3       exrw3.sh.ecf      exrdshpmpc.sh
          r_jrw4        JRW4       exrw4.sh.ecf      exrdshpmpc.sh
          r_jrw5        JRW5       exrw5.sh.ecf      exrdshpmpc.sh
-
-
