@@ -127,7 +127,7 @@ env
 #############################################################
 # Execute the script
 #############################################################
-$HOMEsfcship/scripts/exship_names.sh.ecf
+$HOMEsfcship/scripts/exship_names.sh
 export err=$?; err_chk;
 
 #############################################################
