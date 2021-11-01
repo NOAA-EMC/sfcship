@@ -84,8 +84,8 @@ mkdir -p $COMOUT
 ##############################################
 # Define marine stat data comout directory
 ##############################################
-export WEBmstats=${WEBmstats:-$(compath.py ${envir}/${NET}/${sfcship_ver}/smstats}
-export MARARCH=${MARARCH:-$(compath.py ${envir}/${net}/${sfcship_ver}/marine_archive}
+export WEBmstats=${WEBmstats:-$(compath.py ${envir}/${NET}/${sfcship_ver}/smstats)}
+export MARARCH=${MARARCH:-$(compath.py ${envir}/${net}/${sfcship_ver}/marine_archive)}
 mkdir -p -m 775 $WEBmstats $MARARCH
 
 ##############################################
@@ -93,12 +93,12 @@ mkdir -p -m 775 $WEBmstats $MARARCH
 ##############################################
 if [[ $envir != 'prod' || $PARATEST = 'YES' ]]; then
   export REMOTEUSER=${REMOTEUSER:-"nwprod@ncointra.ncep.noaa.gov"}
-  export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/${NET}/${sfcship_ver}/smstats}
+  export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/${NET}/${sfcship_ver}/smstats)}
   export DEST_DIR=${DEST_DIR:-"/home/nco/nwprod/pmb/nw${envir}/qap"}
 fi
 
 export REMOTEUSER=${REMOTEUSER:-"nwprod@ncorzdm.ncep.noaa.gov"}
-export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/${NET}/${sfcship_ver}/smstats}
+export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/${NET}/${sfcship_ver}/smstats)}
 export DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/pmb/qap"}
 export LOGDIR=${LOGDIR:-"$COMROOT/logs"}
 
