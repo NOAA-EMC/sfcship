@@ -107,6 +107,10 @@ M versions/run.ver
 #PBS -l walltime=00:15:00
 #PBS -A OBSPROC-DEV
 
+. Dependencies
+  ------------
+   gfs.v16.2
+
 ---------------------------------------------------------------------------------------------------------------------
 Release Notes: raws.v1.0.0   Released to NCO on October 30, 2019
 
