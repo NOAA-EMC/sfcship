@@ -71,7 +71,7 @@ mkdir -p $COMOUT
 ##############################################
 # Execute the script
 ##############################################
-$HOMEsfcship/scripts/exrw5.sh.ecf
+$HOMEsfcship/scripts/exrw5.sh
 
 ##############################################
 
