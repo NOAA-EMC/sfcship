@@ -68,7 +68,7 @@ setpdy.sh
 ##############################################
 # Define comout directory
 ##############################################
-export COMOUT=${COMOUT:-$(compath.py ${envir}/${NET}/${ver}/${RUN}.$PDY})}
+export COMOUT=${COMOUT:-$(compath.py ${envir}/${NET}/${sfcship_ver}/${RUN}.$PDY})}
 mkdir -p $COMOUT
 
 ##############################################
