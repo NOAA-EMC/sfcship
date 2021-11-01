@@ -102,8 +102,8 @@ setpdy.sh
 #########################
 # Define COM directories
 #########################
-export COMIN=${COMIN:-$(compath.py ${envir}/${NET}/${sfcship_ver}/VOS})
-export COMOUT=${COMOUT:-$(compath.py ${envir}/${NET}/${sfcship_ver}/VOS})
+export COMIN=${COMIN:-$(compath.py ${envir}/${NET}/${sfcship_ver}/VOS)}
+export COMOUT=${COMOUT:-$(compath.py ${envir}/${NET}/${sfcship_ver}/VOS)}
 mkdir -p $COMOUT
 
 #########################################################
