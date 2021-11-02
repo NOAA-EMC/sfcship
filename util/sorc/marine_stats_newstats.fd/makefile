@@ -7,7 +7,7 @@ SRCS=	newstats.f
 # Tunable parameters
 #
 #
-FC =		ifort
+FC =		ftn
 LDFLAGS =	
 #LIBS =          -L/nwprod/lib -lw3nco_8	
 CMD =		marine_stats_newstats

@@ -1,4 +1,187 @@
+Release Notes: sfcship.v1.1.3  Released to NCO on November 1, 2021
 
+. Transition from WCOSS ph3 to WCOSS2
+
+. Purpose: Provide reports for OPC
+
+. Checkout from https://github.com/NOAA-EMC/sfcship/release/sfcship.v1.1.0
+
+. System requirements for build and run environments
+  --------------------------------------------------
+     module load envvar/1.0
+     module load PrgEnv-intel/8.1.0
+     module load craype/2.7.8
+     module load intel/19.1.3.304
+     module load cray-mpich/8.1.4
+
+. Files
+  -----
+M Release_Notes
+M jobs/JRW1
+M jobs/JRW2
+M jobs/JRW3
+M jobs/JRW4
+M jobs/JRW5
+M jobs/JSHIP_NAMES
+  parm/transfer_raws.list
+  parm/transfer_sfcship.list
+  r_job_wrapper/r_jrw1
+  r_job_wrapper/r_jrw2
+  r_job_wrapper/r_jrw3
+  r_job_wrapper/r_jrw4
+  r_job_wrapper/r_jrw5
+M scripts/exrw1.sh
+  scripts/exrw1.sh.org
+M scripts/exrw2.sh
+M scripts/exrw3.sh
+M scripts/exrw4.sh
+M scripts/exrw5.sh
+M scripts/exship_names.sh
+  sorc/build.scr
+M sorc/hrly_rdshpmpc.fd/makefile
+  sorc/hrly_rdshpmpc.fd/rdshpmpc.f
+  ush/mstr_shp_stn_lst_update.sh
+  ush/mstr_shp_stn_lst_update2.sh
+M util/archqm.fd/archqm.f
+M util/archqm.fd/makefile
+M util/datarch.fd/datarch.f
+M util/datarch.fd/makefile
+  util/fix/buoy_hdr_oneline.txt
+  util/fix/buoy_header.txt
+M util/sorc/archqm.fd/archqm.f
+M util/sorc/archqm.fd/build.sh
+M util/sorc/archqm.fd/makefile
+  util/sorc/archqm.fd/makefile.org
+  util/sorc/build.log
+M util/sorc/build.scr
+M util/sorc/datarch.fd/build.sh
+M util/sorc/datarch.fd/datarch.f
+M util/sorc/datarch.fd/makefile
+  util/sorc/datarch.fd/makefile.org
+M util/sorc/marine_stats_eomqm.fd/build.sh
+  util/sorc/marine_stats_eomqm.fd/eomqm.f
+M util/sorc/marine_stats_eomqm.fd/makefile
+  util/sorc/marine_stats_eomqm.fd/makefile.org
+M util/sorc/marine_stats_genak.fd/build.sh
+  util/sorc/marine_stats_genak.fd/genak.f
+M util/sorc/marine_stats_genak.fd/makefile
+  util/sorc/marine_stats_genak.fd/makefile.org
+M util/sorc/marine_stats_genall.fd/build.sh
+  util/sorc/marine_stats_genall.fd/genall.f
+M util/sorc/marine_stats_genall.fd/makefile
+  util/sorc/marine_stats_genall.fd/makefile.org
+M util/sorc/marine_stats_geniss.fd/build.sh
+  util/sorc/marine_stats_geniss.fd/geniss.f
+M util/sorc/marine_stats_geniss.fd/makefile
+  util/sorc/marine_stats_geniss.fd/makefile.org
+  util/sorc/marine_stats_genstx.fd/genstx.f
+M util/sorc/marine_stats_genstx.fd/makefile
+M util/sorc/marine_stats_newstats.fd/build.sh
+M util/sorc/marine_stats_newstats.fd/makefile
+  util/sorc/marine_stats_newstats.fd/makefile.org
+  util/sorc/marine_stats_newstats.fd/newstats.f
+M util/sorc/marine_stats_rmslash.fd/makefile
+  util/sorc/marine_stats_rmslash.fd/rmslash.f
+  util/ush/exarchqm.sh
+  util/ush/exdatarch.sh
+  util/ush/exrdshpmpc.sh
+  util/ush/marine_genstats_akiss.sh
+  util/ush/marine_genstats_allstx.sh
+  util/ush/marine_main_run_stats.sh
+  util/ush/marine_stats_eomqm.sh
+  util/ush/marine_stats_getrep_ak.sh
+  util/ush/marine_stats_getrep_iss.sh
+  util/ush/marine_stats_sortarch.sh
+  util/ush/marine_stats_sortrunqm.sh
+  util/ush/marine_stats_sync_smstats.sh
+M versions/build.ver
+M versions/run.ver
+
+. PBS cards used in transition development
+  ----------------------------------------
+#PBS -N gdas_rw1_test
+#PBS -o /lfs/h2/emc/obsproc/noscrub/Steve.Stegall/COMDIR/CRONLOG/gdas_rw1_test_20210821_12
+#PBS -e /lfs/h2/emc/obsproc/noscrub/Steve.Stegall/COMDIR/CRONLOG/gdas_rw1_test_20210821_12
+#PBS -q dev_transfer
+#PBS -l select=1:ncpus=3:mem=6800MB
+#PBS -l walltime=00:15:00
+#PBS -A OBSPROC-DEV
+
+. Dependencies
+  ------------
+   gfs.v16.2
+
+---------------------------------------------------------------------------------------------------------------------
+Release Notes: raws.v1.0.0   Released to NCO on October 30, 2019
+
+  . Transition from Tide/Gyre Phase 1 to Venus/Mars
+
+  . Purpose: Provide reports for OPC
+
+  . Checkout from https://github.com/EricRogers-NOAA/RAWSv1
+                            jobs
+                            r_job_wrapper
+                            scriptes
+                            sorc
+                            util/ush
+                            Release_Notes
+
+  . First implementation of the New RAW's generating output for OPC
+
+  . Codes found in directory (Mars/Venus)  /sss/emc/meso/shared/Steven.Lilly/dell/implement/raws.v1.0.0 
+      * jobs - JRW1 JRW2 JRW3 JRW4 JRW5 (JRWO / JRW1.noalert are no longer require )
+
+      * scripts - exrw1.sh.ecf exrw2.sh.ecf  exrw3.sh.ecf
+                  exrw4.sh.ecf exrw5.sh.ecf (exrw0.sh is no longer require)
+
+      * util/ush - exrdshpmpc.sh
+
+      * sorc - build.scr
+             - hrly_rdshppc.fd ( makefile rdshpmpc.f )
+
+
+  . Changes to "jobs codes" - add logic: export SENDECF=${SENDECF:-YES}
+                            - a r_job_wrapper preceeds the job ( contains all load 
+                              modules and logic require to execute the job )
+
+
+  . Changes to "scripts codes" - legacy products remove; only generate output for OPC
+
+
+  . No changes to input data - shpall group 001.001
+                               dbuoy  group 001.002
+                               mbuoy  group 001.003
+                               lcman  group 001.004
+                               tideg  group 001.005
+
+
+  . Output data: No longer written to "pcom"
+   new location on Phase3(DELL - suggested by DataFlow): 
+                            comout=" /gpfs/dell1/nco/ops/hourly/prod/qap.hourly "
+
+
+  . Flow patern:
+
+      r_job_wrapper -> jobs   ->     scripts    ->    util/ush
+ 
+         r_jrw1        JRW1       exrw1.sh.ecf      exrdshpmpc.sh
+         r_jrw2        JRW2       exrw2.sh.ecf      exrdshpmpc.sh
+         r_jrw3        JRW3       exrw3.sh.ecf      exrdshpmpc.sh
+         r_jrw4        JRW4       exrw4.sh.ecf      exrdshpmpc.sh
+         r_jrw5        JRW5       exrw5.sh.ecf      exrdshpmpc.sh
+
+  . Run times: hourly - 20min past the hour
+        Phase3(DELL) JRW1 is the same as Phase2(CURRENT PRODUCTION) JRW1 (single task,share)
+        Phase3(DELL) JRW2 is the same as Phase2(CURRENT PRODUCTION) JRW2 (single task,share)
+        Phase3(DELL) JRW3 is the same as Phase2(CURRENT PRODUCTION) JRW3 (single task,share)
+        Phase3(DELL) JRW4 is the same as Phase2(CURRENT PRODUCTION) JRW4 (single task,share)
+        Phase3(DELL) JRW5 is the same as Phase2(CURRENT PRODUCTION) JRW5 (single task,share)
+
+  . Resource Statistics:
+       Phase3(DELL) runs are similar to Phase2(CURRENT PRODUCTION)
+       run completion 3-5 mins.
+
+---------------------------------------------------------------------------------------------------------------------
 Release Notes: raws.v1.0.0   Released to NCO on October 10, 2019
 
   . Transition from Tide/Gyre Phase 1 to Venus/Mars
@@ -45,5 +228,3 @@ Release Notes: raws.v1.0.0   Released to NCO on October 10, 2019
          r_jrw3        JRW3       exrw3.sh.ecf      exrdshpmpc.sh
          r_jrw4        JRW4       exrw4.sh.ecf      exrdshpmpc.sh
          r_jrw5        JRW5       exrw5.sh.ecf      exrdshpmpc.sh
-
-

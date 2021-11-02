@@ -7,7 +7,7 @@ SRCS=	rmslash.f
 # Tunable parameters
 #
 #
-FC =		ifort
+FC =		ftn
 LDFLAGS =	
 LIBS =	
 CMD =		marine_stats_rmslash

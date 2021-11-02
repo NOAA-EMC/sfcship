@@ -1,6 +1,9 @@
 set -ax
-module load graphics/2.0.0
-module load bufr/11.3.0
-module load w3nco/2.0.6
+
+export VERROOT=${VERROOT:-${PACKAGEROOT}/sfcship.${sfcship_ver}/versions}
+. ${VERROOT}/build.ver
+
+module load w3nco/${w3nco_ver:?}
+module load bufr/${bufr_ver:?}
 module list
 make

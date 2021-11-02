@@ -11,7 +11,8 @@ date
 # obtain unique process id (pid) and make temp directory
 ####################################
 export pid=$$
-
+export outid="LL$job"
+export jobid="${outid}.o${pid}"
 export DATA=${DATAROOT:?}/${jobid:?}
 export TMPDIR=$DATA
 mkdir $DATA
@@ -43,15 +44,15 @@ export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
 ####################################
 # Determine Job Output Name on System
 ####################################
-export outid="LL$job"
-export jobid="${outid}.o${pid}"
+#export outid="LL$job"
+#export jobid="${outid}.o${pid}"
 export pgmout="OUTPUT.${pid}"
 export pgmerr=errfile
 
 ####################################
 # Specify Execution Areas
 ####################################
-export HOMEsfcship=${HOMEsfcship:-${NWROOT}/sfcship.${sfcship_ver}}
+export HOMEsfcship=${HOMEsfcship:-${PACKAGEROOT}/sfcship.${sfcship_ver}}
 export EXECsfcship=${HOMEsfcship}/exec
 export USHgraph=${HOMEsfcship}/util/ush
 
@@ -64,13 +65,13 @@ setpdy.sh
 ##############################################
 # Define comout directory
 ##############################################
-export COMOUT=${COMOUT:-${COMROOT}/${NET}/${envir}/${RUN}.$PDY}
+export COMOUT=${COMOUT:-$(compath.py ${envir}/${NET}/${sfcship_ver}/${RUN}.$PDY})}
 mkdir -p $COMOUT
 
 ##############################################
 # Execute the script
 ##############################################
-$HOMEsfcship/scripts/exrw4.sh.ecf
+$HOMEsfcship/scripts/exrw4.sh
 
 ##############################################
 
