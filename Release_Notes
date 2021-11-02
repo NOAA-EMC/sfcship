@@ -4,7 +4,7 @@ Release Notes: sfcship.v1.1.0  Released to NCO on November 1, 2021
 
 . Purpose: Provide reports for OPC
 
-. Checkout from https://github.com/NOAA-EMC/sfcship/release/sfcship.v1.1.0
+. Checkout: git clone --branch release/sfcship.v1.1.0 https://github.com/noaa-emc/sfcship
 
 . System requirements for build and run environments
   --------------------------------------------------
