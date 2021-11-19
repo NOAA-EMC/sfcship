@@ -1,3 +1,4 @@
+#!/bin/bash
 #######################################################################
 # Name:  marine_stats_sortarch.sh   Author:  Bhavana Rakesh
 # Abstract: This script remove dups from archive file, repove slashes
@@ -40,7 +41,7 @@ msg="marine_stats_sortarch.sh has begun"
     else
        msg="$COMIN/sfc_marine.archive.prev_mon file not available"
        echo $msg
-       postmsg "$jlogfile" "$msg"
+       postmsg "$msg"
       exit
     fi
 exit

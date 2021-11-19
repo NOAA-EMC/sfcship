@@ -1,3 +1,4 @@
+#!/bin/bash
 ####################################################################
 # Name: marine_genstats_akiss.sh   Author:
 # Abstract:

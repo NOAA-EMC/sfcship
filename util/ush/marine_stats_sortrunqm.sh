@@ -1,3 +1,4 @@
+#!/bin/bash
 ##################################################################
 # Name: marine_stats_sortrunqm.sh   Author:
 # Abstract:  This script remove dups from QM archive file and do

@@ -1,3 +1,4 @@
+#!/bin/bash
 ##################################################################
 # Name: marine_stats_getrep_iss.sh   Author:
 # Abstract:

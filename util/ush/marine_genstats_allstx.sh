@@ -1,3 +1,4 @@
+#!/bin/bash
 #######################################################################
 # Name: marine_genstats_allstx.sh  Author: Chris Caruso
 # Abstract:  This script produces monthly stats and is sent to
