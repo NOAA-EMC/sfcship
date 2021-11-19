@@ -118,7 +118,7 @@ unshpcnt=`wc -l < unqiships4`
 if [ $unshpcnt -eq 0 ]; then
   msg="No changes to previous (modified) NDBC active ship list file or to \
 previous updated \"Master Ship Station List\" file are required" 
-  postmsg "$jlogfile" "$msg"
+  postmsg "$msg"
   set +x
   echo
   echo "$msg"
@@ -132,7 +132,7 @@ previous updated \"Master Ship Station List\" file are required"
 
     msg="Input and Output VOS archive locations differ, output location is \
 empty -- copy Input VOS arch files to Output location -- likely checkout" 
-    postmsg "$jlogfile" "$msg"
+    postmsg "$msg"
     set +x
     echo
     echo "$msg"
@@ -142,7 +142,7 @@ empty -- copy Input VOS arch files to Output location -- likely checkout"
     cp $VOSarch_IN/ship_names $VOSarch_OUT/ship_names
   fi
   msg="VOS2_DAILY PROCESSING COMPLETED NORMALLY"
-  postmsg "$jlogfile" "$msg"
+  postmsg "$msg"
   set +x
   echo
   echo "$msg"
@@ -154,7 +154,7 @@ fi
      
 msg="Changes to previous (modified) NDBC active ship list file and to previous \
 updated \"Master Ship Station List\" file ARE REQUIRED" 
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 set +x
 echo
 echo "$msg"
@@ -164,7 +164,7 @@ set -x
 $USHsfcship/mstr_shp_stn_lst_update2.sh
 
 msg="VOS2_DAILY PROCESSING COMPLETED NORMALLY"
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 set +x
 echo
 echo "$msg"
