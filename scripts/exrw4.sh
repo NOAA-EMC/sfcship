@@ -1,3 +1,4 @@
+#!/bin/bash
 set +x
 # Program Name:  EXRW4
 # Author(s)/Contact(s):  Steven Lilly
@@ -45,7 +46,7 @@ then
 fi
 
 msg='JOB COMPLETED NORMALLY'
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 
 set +x
 echo " ***** RW4 PROCESSING COMPLETED NORMALLY *****"

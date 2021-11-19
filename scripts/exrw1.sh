@@ -1,8 +1,9 @@
+#!/bin/bash
 set +x
 # Program Name:  EXRW1
 # Author(s)/Contact(s):  Steven Lilly
 # Abstract:  Dump marine data for OPC to quality control
-# History Log:  
+# History Log:
 #     10/2019: First implementation of this script on Phase3
 #
 # Usage:
@@ -20,7 +21,6 @@ set +x
 #   Condition codes:
 #
 #   User controllable options: None
-#
 set -xa
 
 cd $DATA   
@@ -60,7 +60,7 @@ fi
 
 ###############################################
 msg='JOB COMPLETED NORMALLY'
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 ###############################################
 
 set +x

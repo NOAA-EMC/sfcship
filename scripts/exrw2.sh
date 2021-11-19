@@ -1,8 +1,9 @@
+#!/bin/bash
 set +x
 # Program Name:  EXRW2
 # Author(s)/Contact(s):  Steven Lilly
 # Abstract:  Dump marine data for OPC to quality control
-# History Log:  
+# History Log:
 #     10/2019: First implementation of this script on Phase3
 #
 # Usage:
@@ -21,14 +22,14 @@ set +x
 #
 #   User controllable options: None
 set -xa
-                                          
+
 cd $DATA
  
 set +x
 echo '------------------------------------------------------'
 echo "              IBM $envir PROCESSING                "
 echo "      `date`      "
-echo "     JOB WWRW2$HOUR   CYCLE TIME IS  ... $CYCLE"
+echo "     JOB WWRW2$HOUR   CYCLE TIME IS  ... $cycle"
 echo ' '
 echo ' $VARIABLE info for this execution:'
 echo " Processing executable environment is ............ $envir"
@@ -48,13 +49,12 @@ then
 #  note:  this script dumps data for 00Z, 06Z, 12Z, or 18Z synoptic period
 #  +/- 3 hours from start of synoptic period.
 ###########################################
-   $USHgraph/exrdshpmpc.sh $MAPHOUR
-
+  $USHgraph/exrdshpmpc.sh $MAPHOUR
 fi
 
 ###########################################
 msg='JOB COMPLETED NORMALLY'
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 ###########################################
 
 set +x
@@ -62,4 +62,4 @@ echo " ***** RW2 PROCESSING COMPLETED NORMALLY *****"
 echo " ***** RW2 PROCESSING COMPLETED NORMALLY *****"
 echo " ***** RW2 PROCESSING COMPLETED NORMALLY *****"
 set -xa
- 
+

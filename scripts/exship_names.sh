@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ######################################################################
 echo "----------------------------------------------------------------------  "
 echo "exship_names.sh.ecf- This script copies an updated VOS ship list from   "
@@ -22,7 +22,7 @@ set -aux
 cd $DATA
 
 msg=" processing of SHIP_NAMES file has begun on `hostname`"
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
  
 # -----------------------------------------------------------------------------
 # PROCESS_MASTER_SHIP_STNLST can only be YES  (where default is YES)
@@ -31,7 +31,7 @@ PROCESS_MASTER_SHIP_STNLST=${PROCESS_MASTER_SHIP_STNLST:-YES}
 if [ "$PROCESS_MASTER_SHIP_STNLST" = 'YES' ]; then
  
    msg="UPDATE MASTER SHIP STATION LIST FOR $PDY"
-   postmsg "$jlogfile" "$msg"
+   postmsg "$msg"
    set +x
    echo
    echo "$msg"
@@ -59,5 +59,5 @@ echo " ****** PROCESSING COMPLETED NORMALLY"
 echo " "
 set -x
 msg='ENDED NORMALLY.'
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 ################## END OF SCRIPT #######################
