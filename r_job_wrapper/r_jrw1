@@ -1,6 +1,5 @@
 #!/bin/bash -l
 
-
 export VERROOT=${VERROOT:-${PACKAGEROOT}/sfcship.${sfcship_ver}/versions}
 . ${VERROOT}/run.ver
 
