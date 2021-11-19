@@ -29,11 +29,6 @@ export NET=${NET:-sfcship}
 export RUN=${RUN:-sfcship}
 
 ####################################
-# File To Log Msgs
-####################################
-export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
-
-####################################
 # SENDCOM  - Copy Files From TMPDIR to $COMOUT
 # SENDDBN  - Issue DBNet Client Calls
 ####################################
@@ -41,6 +36,11 @@ export SENDCOM=${SENDCOM:-YES}
 export SENDDBN=${SENDDBN:-YES}
 export SENDECF=${SENDECF:-YES}
  
+####################################
+# File To Log Msgs
+####################################
+#export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
+
 ####################################
 # Determine Job Output Name on System
 ####################################
@@ -65,7 +65,7 @@ setpdy.sh
 ##############################################
 # Define comout directory
 ##############################################
-export COMOUT=${COMOUT:-$(compath.py ${envir}/${NET}/${sfcship_ver}/${RUN}.$PDY})}
+export COMOUT=${COMOUT:-$(compath.py -o ${NET}/${sfcship_ver}/${RUN}.${PDY})}
 mkdir -p $COMOUT
 
 ##############################################
