@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 set -xa
 date
@@ -30,9 +30,16 @@ export RUN=${RUN:-sfcship}
 export krun=${krun:-2}
 
 ####################################
+# SENDCOM  - Copy Files From TMPDIR to $comout
+####################################
+export SENDCOM=${SENDCOM:-YES}
+export SENDDBN=${SENDDBN:-YES}
+export SENDECF=${SENDECF:-YES}
+ 
+####################################
 # File To Log Msgs
 ####################################
-export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
+#export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
 
 ####################################
 # Determine Job Output Name on System
@@ -41,13 +48,6 @@ export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
 #export jobid="${outid}.o${pid}"
 export pgmout="OUTPUT.${pid}"
 export pgmerr=errfile
-
-####################################
-# SENDCOM  - Copy Files From TMPDIR to $comout
-####################################
-export SENDCOM=${SENDCOM:-YES}
-export SENDDBN=${SENDDBN:-YES}
-export SENDECF=${SENDECF:-YES}
 
 ####################################
 # Specify Execution Areas
@@ -65,16 +65,15 @@ setpdy.sh
 ##############################################
 # Define comout directory
 ##############################################
-export COMOUT=${COMOUT:-$(compath.py ${envir}/${NET}/${sfcship_ver}/${RUN}.$PDY})}
+export COMOUT=${COMOUT:-$(compath.py -o ${NET}/${sfcship_ver}/${RUN}.${PDY})}
 mkdir -p $COMOUT
- 
-#############################################################
+
+##############################################
 # Execute the script
-#############################################################
+##############################################
 $HOMEsfcship/scripts/exrw2.sh
 
-
-#############################################################
+##############################################
 
 if [ -e "$pgmout" ]; then
  cat $pgmout
