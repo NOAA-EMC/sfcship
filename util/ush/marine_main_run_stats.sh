@@ -206,7 +206,9 @@ fi
 #	Upload AK, ISS and global stats to rzdm
 #####################################################################
 
-       sh $USHhrly/marine_stats_sync_smstats.sh
+       if [ $SENDWEB = 'YES' ]; then
+         sh $USHhrly/marine_stats_sync_smstats.sh
+       fi
 
 fi
 exit

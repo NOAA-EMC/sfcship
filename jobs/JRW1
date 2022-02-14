@@ -74,8 +74,9 @@ setpdy.sh
 ##############################################
 export COMIN=${COMIN:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/${RUN}.${PDY})}
 export COMINm1=${COMINm1:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/${RUN}.${PDYm1})}
-export COMINgfs=${COMINgfs:-$(compath.py ${envir}/com/gfs/${gfs_ver}/gfs)}
-export COMINgdas=${COMINgdas:-$(compath.py ${envir}/com/gfs/${gfs_ver}/gdas)}
+export COMINgfs=${COMINgfs:-$(compath.py ${envir}/com/gfs/${gfs_ver})/gfs}
+export COMINgdas=${COMINgdas:-$(compath.py ${envir}/com/gfs/${gfs_ver})/gdas}
+export COMINobsproc_gdas=${COMINobsproc_gdas:-$(compath.py ${envir}/com/obsproc/${obsproc_ver})/gdas}
 export VOSarch_IN=${VOSarch_IN:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/VOS)}
 export COMOUT=${COMOUT:-$(compath.py -o ${NET}/${sfcship_ver}/${RUN}.${PDY})}
 mkdir -p $COMOUT
@@ -91,15 +92,17 @@ mkdir -p -m 775 $WEBmstats $MARARCH
 # Define marine stat scp variables 
 ##############################################
 if [[ $envir != 'prod' || $PARATEST = 'YES' ]]; then
-  export REMOTEUSER=${REMOTEUSER:-"nwprod@ncointra.ncep.noaa.gov"}
-  export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/smstats)}
-  export DEST_DIR=${DEST_DIR:-"/home/nco/nwprod/pmb/nw${envir}/qap"}
+  #export REMOTEUSER=${REMOTEUSER:-"nwprod@ncointra.ncep.noaa.gov"}
+  #export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/smstats)}
+  export DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/pmb/nwpara/qap"}
 fi
 
+export SENDWEB=${SENDWEB:-YES}
 export REMOTEUSER=${REMOTEUSER:-"nwprod@ncorzdm.ncep.noaa.gov"}
 export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/smstats)}
 export DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/pmb/qap"}
 export LOGDIR=${LOGDIR:-"$COMROOT/logs"}
+
 
 #############################################################
 # Execute the script

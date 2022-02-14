@@ -27,6 +27,7 @@ export cycle=t${cyc}z
 ####################################
 export NET=${NET:-sfcship}
 export RUN=${RUN:-sfcship}
+export krun=${krun:-4}
 
 ####################################
 # SENDCOM  - Copy Files From TMPDIR to $COMOUT

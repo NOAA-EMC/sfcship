@@ -4,10 +4,9 @@ set -x
 
 #export VERROOT=${VERROOT:-${PACKAGEROOT}/sfcship.${sfcship_ver}/versions}
 #. ${VERROOT}/build.ver
-module purge
+module reset
 source ../../versions/build.ver
 
-module load envvar/$envvar_ver
 module load PrgEnv-intel/$PrgEnv_intel_ver
 module load craype/$craype_ver
 module load intel/$intel_ver

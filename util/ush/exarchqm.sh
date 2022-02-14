@@ -156,7 +156,7 @@ then
   hour=18
   datey4d=${datem1}
 fi
-SPrep=${COMINgdas}.$datey4d/${hour}/atmos/gdas.t${hour}z.prepbufr
+SPrep=${COMINobsproc_gdas}.$datey4d/${hour}/atmos/gdas.t${hour}z.prepbufr
 #
 #  check to see if a qm archive file exists for today.  if not, then
 #  copy qm archive file from yesterday's /com and append new data to it.
