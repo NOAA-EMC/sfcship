@@ -1,0 +1,40 @@
+#PBS -N sfcship_ship_names
+#PBS -j oe
+#PBS -S /bin/bash
+#PBS -q %QUEUE%
+#PBS -A %PROJ%-%PROJENVIR%
+#PBS -l walltime=00:30:00
+#PBS -l select=1:ncpus=1:mem=1GB
+#PBS -l debug=true
+
+export model=sfcship
+
+%include <head.h>
+%include <envir-p1.h>
+
+export cyc=00
+export job=ship_names
+
+#############################################
+##  module load
+#############################################
+module load intel/${intel_ver:?}
+module list
+
+# CALL executable job script here
+${HOMEsfcship}/jobs/JSHIP_NAMES
+
+%include <tail.h>
+%manual
+######################################################################
+# Purpose: To execute the job that runs raw0
+######################################################################
+
+######################################################################
+# Job specific troubleshooting instructions:
+#  see generic troubleshoot manual page
+#
+######################################################################
+
+# include manual page below
+%end

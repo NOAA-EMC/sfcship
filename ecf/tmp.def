@@ -1,0 +1,97 @@
+suite prod
+  family primary
+
+    family 00
+      family sfcship
+        edit PACKAGEHOME '/lfs/h1/ops/%ENVIR%/packages/sfcship.%sfcship_ver%'
+        edit PROJ 'SFCSHP'
+        family v1.1
+          defstatus complete
+          task jsfcship_rw100
+            trigger :TIME >= 0020 and :TIME < 0600
+          task jsfcship_ship_names
+            trigger :TIME >= 0030 and :TIME < 2300
+          task jsfcship_rw200
+            trigger :TIME >= 0040 and :TIME < 0600
+          task jsfcship_rw301
+            trigger :TIME >= 0120 and :TIME < 0600
+          task jsfcship_rw401
+            trigger :TIME >= 0140 and :TIME < 0600
+          task jsfcship_rw502
+            trigger :TIME >= 0220 and :TIME < 0600
+          task jsfcship_rw103
+            trigger :TIME >= 0320 and :TIME < 0600
+          task jsfcship_rw304
+            trigger :TIME >= 0420 and :TIME < 0600
+          task jsfcship_rw505
+            trigger :TIME >= 0520 and :TIME < 0600
+        endfamily
+      endfamily
+    endfamily 
+    family 06
+      family sfcship
+        edit PACKAGEHOME '/lfs/h1/ops/%ENVIR%/packages/sfcship.%sfcship_ver%'
+        edit PROJ 'SFCSHP'
+        family v1.1
+          defstatus complete
+          task jsfcship_rw106
+            trigger :TIME >= 0620 and :TIME < 1200
+          task jsfcship_rw307
+            trigger :TIME >= 0720 and :TIME < 1200
+          task jsfcship_rw508
+            trigger :TIME >= 0820 and :TIME < 1200
+          task jsfcship_rw310
+            trigger :TIME >= 1020 and :TIME < 1200
+        endfamily
+      endfamily
+    endfamily 
+    family 12
+      family sfcship
+        edit PACKAGEHOME '/lfs/h1/ops/%ENVIR%/packages/sfcship.%sfcship_ver%'
+        edit PROJ 'SFCSHP'
+        family v1.1
+          defstatus complete
+          task jsfcship_rw112
+            edit QUEUE 'prod_transfer'
+            trigger :TIME >= 1220 and :TIME < 1800 
+          task jsfcship_rw212
+            trigger :TIME >= 1240 and :TIME < 1800 
+          task jsfcship_rw313
+            trigger :TIME >= 1320 and :TIME < 1800 
+          task jsfcship_rw413
+            trigger :TIME >= 1340 and :TIME < 1800 
+          task jsfcship_rw514
+            trigger :TIME >= 1420 and :TIME < 1800 
+          task jsfcship_rw115
+            trigger :TIME >= 1520 and :TIME < 1800 
+          task jsfcship_rw316
+            trigger :TIME >= 1620 and :TIME < 1800 
+          task jsfcship_rw517
+            trigger :TIME >= 1720 and :TIME < 1800 
+        endfamily
+      endfamily
+    endfamily 
+    family 18
+      family sfcship
+        edit PACKAGEHOME '/lfs/h1/ops/%ENVIR%/packages/sfcship.%sfcship_ver%'
+        edit PROJ 'SFCSHP'
+        family v1.1
+          defstatus complete
+          task jsfcship_rw118
+            defstatus complete
+            trigger :TIME >= 1820 and :TIME < 2359 
+          task jsfcship_rw319
+            defstatus complete
+            trigger :TIME >= 1920 and :TIME < 2359 
+          task jsfcship_rw520
+            defstatus complete
+            trigger :TIME >= 2020 and :TIME < 2359 
+          task jsfcship_rw322
+            trigger :TIME >= 2220 and :TIME < 2359 
+        endfamily
+      endfamily
+    endfamily
+
+  endfamily
+endsuite
+
