@@ -2,8 +2,14 @@
 set -x
 #. /usrx/local/prod/lmod/lmod/init/bash
 
-export VERROOT=${VERROOT:-${PACKAGEROOT}/sfcship.${sfcship_ver}/versions}
-. ${VERROOT}/build.ver
+#export VERROOT=${VERROOT:-${PACKAGEROOT}/sfcship.${sfcship_ver}/versions}
+#. ${VERROOT}/build.ver
+module reset
+source ../../versions/build.ver
+
+module load PrgEnv-intel/$PrgEnv_intel_ver
+module load craype/$craype_ver
+module load intel/$intel_ver
 
 module load w3nco/${w3nco_ver:?}
 module load bufr/${bufr_ver:?}
@@ -17,10 +23,12 @@ for dir in `ls -1d *.fd`
 do
   echo $dir
   cd $dir
-  make -f make*
+  #make -f make*
+  make -f makefile
   exec=$(echo $dir | cut -f1 -d.)
   echo "mv $exec ../../exec/"
   mv $exec ../../exec/
-  make -f make* clean
+  #make -f make* clean
+  make -f makefile clean
   cd ..
 done

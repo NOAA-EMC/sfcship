@@ -23,39 +23,39 @@
 # directory are included, so if no exclude patterns match that file, it will be
 # transferred.
 
-com/sfcship/_ENVIR_/sfcship._PDY_/
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDY_/
 B 540000
 E
 
-com/sfcship/_ENVIR_/sfcship._PDYm1_/
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDYm1_/
 B 540000
 E
 
-com/sfcship/_ENVIR_/smstats/
+_COMROOT_/sfcship/_SHORTVER_/smstats/
 B 540000
 E
 
-com/sfcship/_ENVIR_/VOS/
+_COMROOT_/sfcship/_SHORTVER_/VOS/
 B 540000
 E
 
-com/sfcship/_ENVIR_/marine_archive/
+_COMROOT_/sfcship/_SHORTVER_/marine_archive/
 B 540000
 E
 
-com/sfcship/_ENVIR_/sfcship._PDYm2_/
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDYm2_/
 B 540000
 E
 
-com/sfcship/_ENVIR_/sfcship._PDYm3_/
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDYm3_/
 B 540000
 E
 
-com/sfcship/_ENVIR_/sfcship._PDYm4_/
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDYm4_/
 B 540000
 E
 
-com/sfcship/_ENVIR_/sfcship._PDYm5_/
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDYm5_/
 B 540000
 E
 

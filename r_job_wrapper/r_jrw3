@@ -1,6 +1,5 @@
 #!/bin/bash -l
 
-
 export VERROOT=${VERROOT:-${PACKAGEROOT}/sfcship.${sfcship_ver}/versions}
 . ${VERROOT}/run.ver
 
@@ -16,3 +15,4 @@ module list
 
 export PACKAGEROOT=${PACKAGEROOT:-${PACKAGEROOT}/sfcship.${sfcship_ver}
 ${PACKAGEROOT}/jobs/JRW3
+

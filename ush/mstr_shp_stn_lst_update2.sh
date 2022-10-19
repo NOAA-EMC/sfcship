@@ -162,8 +162,8 @@ this file and (modified) NDBC active ship list file cannot be updated in \
 $VOSarch_OUT"
   msg1="**WARNING (cont.): The current NDBC active ship list file \
 $SHPNAMDIR_DCOM/activeShipLst has too many reports or is corrupted"
-  postmsg "$jlogfile" "$msg"
-  postmsg "$jlogfile" "$msg1"
+  postmsg "$msg"
+  postmsg "$msg1"
   set +x
   echo
   echo "$msg"
@@ -189,7 +189,7 @@ else
   msg="**WARNING: ERROR COPYING UPDATED \"MASTER SHIP STATION LIST\" TO \
 $VOSarch_OUT/ship_names"
 fi
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 set +x
 echo
 echo "$msg"
@@ -205,7 +205,7 @@ else
   msg="**WARNING: ERROR COPYING MODIFIED NCDC ACTIVE SHIP LIST TO \
 $VOSarch_OUT/activeShiprev"
 fi
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 set +x
 echo
 echo "$msg"

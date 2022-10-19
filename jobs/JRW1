@@ -1,8 +1,7 @@
-#!/bin/bash 
+#!/bin/bash
 
 set -xa
 date
-
 
 # #### 01/19/00 ###############################
 # SETUP RAW HRLY PROCESSING VARIABLES
@@ -17,7 +16,7 @@ export pid=$$
 # Determine Job Output Name on System
 ####################################
 export outid="$job"
-export jobid="${outid}.o${pid}"
+#export jobid="${outid}.o${pid}"
 export pgmout="OUTPUT.${pid}"
 export pgmerr=errfile
 
@@ -40,7 +39,7 @@ export krun=${krun:-1}
 ####################################
 # File To Log Msgs
 ####################################
-export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
+#export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
 
 ####################################
 # SENDCOM  - Copy Files From TMPDIR to $comout
@@ -73,34 +72,37 @@ setpdy.sh
 ##############################################
 # Define comout directory
 ##############################################
-export COMIN=${COMIN:-$(compath.py ${envir}/${NET}/${sfcship_ver}/${RUN}.${PDY})}
-export COMINm1=${COMINm1:-$(compath.py ${envir}/${NET}/${sfcship_ver}/${RUN}.${PDYm1})}
-export COMINgfs=${COMINgfs:-$(compath.py ${envir}/gfs/${gfs_ver}/gfs)}
-export COMINgdas=${COMINgdas:-$(compath.py ${envir}/gfs/${gfs_ver}/gdas)}
-export VOSarch_IN=${VOSarch_IN:-$$(compath.py ${envir}/${NET}/${sfcship_ver}/VOS)}
-export COMOUT=${COMOUT:-$(compath.py ${envir}/${NET}/${sfcship_ver}/${RUN}.$PDY})}
+export COMIN=${COMIN:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/${RUN}.${PDY})}
+export COMINm1=${COMINm1:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/${RUN}.${PDYm1})}
+export COMINgfs=${COMINgfs:-$(compath.py ${envir}/com/gfs/${gfs_ver})/gfs}
+export COMINgdas=${COMINgdas:-$(compath.py ${envir}/com/gfs/${gfs_ver})/gdas}
+export COMINobsproc_gdas=${COMINobsproc_gdas:-$(compath.py ${envir}/com/obsproc/${obsproc_ver})/gdas}
+export VOSarch_IN=${VOSarch_IN:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/VOS)}
+export COMOUT=${COMOUT:-$(compath.py -o ${NET}/${sfcship_ver}/${RUN}.${PDY})}
 mkdir -p $COMOUT
 
 ##############################################
 # Define marine stat data comout directory
 ##############################################
-export WEBmstats=${WEBmstats:-$(compath.py ${envir}/${NET}/${sfcship_ver}/smstats)}
-export MARARCH=${MARARCH:-$(compath.py ${envir}/${net}/${sfcship_ver}/marine_archive)}
+export WEBmstats=${WEBmstats:-$(compath.py -o ${NET}/${sfcship_ver})/smstats}
+export MARARCH=${MARARCH:-$(compath.py -o ${NET}/${sfcship_ver})/marine_archive}
 mkdir -p -m 775 $WEBmstats $MARARCH
 
 ##############################################
 # Define marine stat scp variables 
 ##############################################
 if [[ $envir != 'prod' || $PARATEST = 'YES' ]]; then
-  export REMOTEUSER=${REMOTEUSER:-"nwprod@ncointra.ncep.noaa.gov"}
-  export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/${NET}/${sfcship_ver}/smstats)}
-  export DEST_DIR=${DEST_DIR:-"/home/nco/nwprod/pmb/nw${envir}/qap"}
+  #export REMOTEUSER=${REMOTEUSER:-"nwprod@ncointra.ncep.noaa.gov"}
+  #export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/smstats)}
+  export DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/pmb/nwpara/qap"}
 fi
 
+export SENDWEB=${SENDWEB:-YES}
 export REMOTEUSER=${REMOTEUSER:-"nwprod@ncorzdm.ncep.noaa.gov"}
-export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/${NET}/${sfcship_ver}/smstats)}
+export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/smstats)}
 export DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/pmb/qap"}
 export LOGDIR=${LOGDIR:-"$COMROOT/logs"}
+
 
 #############################################################
 # Execute the script

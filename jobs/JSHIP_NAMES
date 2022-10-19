@@ -45,7 +45,7 @@ set -x
 ##############################
 export cycle=t${cyc}z
 
-###################################
+####################################
 # obtain unique process id (pid) and make temp directory
 ####################################
 export pid=$$
@@ -54,7 +54,7 @@ export pid=$$
 # Determine Job Output Name on System
 ####################################
 export outid="$job"
-export jobid="${outid}.o${pid}"
+#export jobid="${outid}.o${pid}"
 export pgmout="OUTPUT.${pid}"
 export pgmerr=errfile
 
@@ -64,12 +64,13 @@ export pgmerr=errfile
 export DATA=${DATA:-$DATAROOT/${jobid}}
 rm -rf $DATA
 mkdir -p $DATA
+
 cd $DATA
 
 ######################################
 # Set job log file for postmsg output
 ######################################
-export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
+#export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
 
 ########################################################
 # SENDCOM      - Copy files to $COMOUT directory
@@ -77,12 +78,12 @@ export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
 # SENDDBN      - Alert output file to TOC
 ########################################################
 export SENDCOM=${SENDCOM:-YES}
-export SENDECF=${SENDECF:-YES}
 export SENDDBN=${SENDDBN:-YES}
+export SENDECF=${SENDECF:-YES}
 
-##########################
+####################################
 # Specify Execution Areas
-##########################
+####################################
 export HOMEsfcship=${HOMEsfcship:-${PACKAGEROOT}/sfcship.${sfcship_ver}}
 export EXECsfcship=${HOMEsfcship}/exec
 export USHsfcship=${HOMEsfcship}/ush
@@ -102,8 +103,8 @@ setpdy.sh
 #########################
 # Define COM directories
 #########################
-export COMIN=${COMIN:-$(compath.py ${envir}/${NET}/${sfcship_ver}/VOS)}
-export COMOUT=${COMOUT:-$(compath.py ${envir}/${NET}/${sfcship_ver}/VOS)}
+export COMIN=${COMIN:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/VOS)}
+export COMOUT=${COMOUT:-$(compath.py -o ${NET}/${sfcship_ver}/VOS)}
 mkdir -p $COMOUT
 
 #########################################################
@@ -113,8 +114,10 @@ export PROCESS_MASTER_SHIP_STNLST=${PROCESS_MASTER_SHIP_STNLST:-YES}
 if [ $PROCESS_MASTER_SHIP_STNLST == YES ]; then
    export DCOMROOT=${DCOMROOT:-/lfs/h1/ops/prod/dcom}
    export SHPNAMDIR_DCOM=${SHPNAMDIR:-${DCOMROOT}/ndbc}
-   export VOSarch_IN=${VOSarch_IN:-$(compath.py ${envir}/${NET}/${sfcship_ver}/VOS)}
-   export VOSarch_OUT=${VOSarch_OUT:-$(compath.py ${envir}/${NET}/${sfcship_ver}/VOS)}
+   #export VOSarch_IN=${VOSarch_IN:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/VOS)}
+   #export VOSarch_OUT=${VOSarch_OUT:-$(compath.py -o ${NET}/${sfcship_ver}/VOS)}
+   export VOSarch_IN=$COMIN
+   export VOSarch_OUT=$COMOUT
    mkdir -m 755 $VOSarch_OUT
 else
    echo "WARNING: PROCESS_MASTER_SHIP_STNLST=$PROCESS_MASTER_SHIP_STNLST, exiting...."

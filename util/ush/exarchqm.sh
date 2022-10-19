@@ -1,3 +1,4 @@
+#!/bin/bash
 #####################################################################
 # NAME:   exarchqm.sh           Author: Chris Caruso
 # Abstract:  This script dumps surface marine data from the gdas
@@ -75,7 +76,7 @@ then
 else
    echo ""
    msg="NONfatal error from $job - invalid cycle $cycle invoking exarchqm.sh"
-   postmsg "$jlogfile" "$msg"
+   postmsg "$msg"
    exit
 fi
 
@@ -86,7 +87,7 @@ echo "########################################################"
 set -x
 
 msg="Current cycle is $cycle.  Archive sfc marine quality marks for $archcyc."
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 
 #
 #  look for a gdas prepbufr file
@@ -121,7 +122,7 @@ then
         then
           echo "Copy of monthly marine qm archive file failed.  Rerun of this job required."
           msg="Copy of monthly marine qm archive file failed.  Rerun of this job required."
-          postmsg "$jlogfile" "$msg"
+          postmsg "$msg"
           err_chk
          else
            rm -f $COMIN/$ARCHFILE                  
@@ -134,7 +135,7 @@ then
         then
           echo "Copy of monthly marine qm archive file failed.  Rerun of this job required."
           msg="Copy of monthly marine qm archive file failed.  Rerun of this job required."
-          postmsg "$jlogfile" "$msg"
+          postmsg "$msg"
           err_chk
         else
           touch $COMIN/$ARCHFILE                    
@@ -155,7 +156,7 @@ then
   hour=18
   datey4d=${datem1}
 fi
-SPrep=${COMINgdas}.$datey4d/${hour}/atmos/gdas.t${hour}z.prepbufr
+SPrep=${COMINobsproc_gdas}.$datey4d/${hour}/atmos/gdas.t${hour}z.prepbufr
 #
 #  check to see if a qm archive file exists for today.  if not, then
 #  copy qm archive file from yesterday's /com and append new data to it.
@@ -189,19 +190,19 @@ then
    if test $err -ne 0 
    then
       msg="NONfatal error from $job - error return status $err from ARCHQM"
-      postmsg "$jlogfile" "$msg"
+      postmsg "$msg"
    else
       if test $SENDCOM = YES
       then
          cp $ARCHFILE $COMOUT
       fi
       msg="archqm for ${datey4d}${acyc} completed normally"
-      postmsg "$jlogfile" "$msg"
+      postmsg "$msg"
    fi
 
 else
    echo; echo "No prepbufr file found!"
    msg="NONfatal error from $job - No prepbufr file found"
-   postmsg "$jlogfile" "$msg"
+   postmsg "$msg"
    exit
 fi

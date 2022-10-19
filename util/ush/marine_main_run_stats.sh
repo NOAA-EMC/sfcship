@@ -1,3 +1,4 @@
+#!/bin/bash
 ####################################################################
 # Name:   marine_maine_main_run_stats.sh   Author: Bhavana Rakesh & V. Krishna Kumar
 # Abstract:  This script will call a series of util/ush scripts to
@@ -39,7 +40,7 @@ cd $DATA
 ########################################
 set -x
 msg="marine_main_run_stats.sh HAS BEGUN!"
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 ########################################
 # Run the following section only for the 1st of the month
 
@@ -54,7 +55,7 @@ if [ $1 -eq '01' ] ; then
     else
        msg="$COMIN/sfc_marine.qmarch.prev_mon file not available"
        echo $msg 
-       postmsg "$jlogfile" "$msg"
+       postmsg "$msg"
       exit
     fi
 
@@ -154,13 +155,13 @@ if test -s $DATA/archive.sort
     else
        msg="archive.sort file size is zero bytes -- exit here"
        echo $msg
-       postmsg "$jlogfile" "$msg"
+       postmsg "$msg"
        exit
     fi
 else
    msg="archive.sort file is missing -- exit here"
    echo $msg
-   postmsg "$jlogfile" "$msg"
+   postmsg "$msg"
    exit
 fi
 
@@ -205,7 +206,9 @@ fi
 #	Upload AK, ISS and global stats to rzdm
 #####################################################################
 
-       sh $USHhrly/marine_stats_sync_smstats.sh
+       if [ $SENDWEB = 'YES' ]; then
+         sh $USHhrly/marine_stats_sync_smstats.sh
+       fi
 
 fi
 exit

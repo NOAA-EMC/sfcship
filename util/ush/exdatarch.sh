@@ -1,3 +1,4 @@
+#!/bin/bash
 ####################################################################
 # Name: exdatarch.sh             Author:  Chris Caruso
 # Abstract:  This script dumps surface marine data and compares that
@@ -90,7 +91,7 @@ then
 else
    echo ""
    msg="NONfatal error from $job - invalid cycle $cycle invoking exdatarch.sh"
-   postmsg "$jlogfile" "$msg"
+   postmsg "$msg"
    exit
 fi
 
@@ -101,7 +102,7 @@ echo "########################################################"
 set -x
 
 msg="Current cycle is $cycle.  Archive surface marine data for $archcycle."
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 
 #
 #  look for a guess file
@@ -137,7 +138,7 @@ then
         then
           echo "Copy of monthly marine archive file failed. Rerun of this job required."
           msg="Copy of monthly marine archive file failed. Rerun of this job required."
-          postmsg "$jlogfile" "$msg"
+          postmsg "$msg"
           err_chk
         else
           rm -f $COMIN/$ARCHFILE                  
@@ -150,7 +151,7 @@ then
         then
           echo "Copy of monthly marine archive file failed. Rerun of this job required."
           msg="Copy of monthly marine archive file failed. Rerun of this job required."
-          postmsg "$jlogfile" "$msg"
+          postmsg "$msg"
           err_chk
         else
           touch $COMIN/$ARCHFILE                    
@@ -243,14 +244,14 @@ then
    if test $err -ne 0 
    then
       msg="NONfatal error from $job - error return status $err from DATARCH"
-      postmsg "$jlogfile" "$msg"
+      postmsg "$msg"
    else
       if test $SENDCOM = YES
       then
          cp $ARCHFILE $COMOUT
       fi
       msg="datarch for ${dumpdat}${acyc} completed normally"
-      postmsg "$jlogfile" "$msg"
+      postmsg "$msg"
    fi
 
 elif [ -s $SG06b ]
@@ -265,20 +266,20 @@ then
    if test $err -ne 0 
    then
       msg="NONfatal error from $job - error return status $err from DATARCH"
-      postmsg "$jlogfile" "$msg"
+      postmsg "$msg"
    else
       if test $SENDCOM = YES
       then
          cp $ARCHFILE $COMOUT
       fi
       msg="datarch for ${dumpdat}${acyc} completed normally"
-      postmsg "$jlogfile" "$msg"
+      postmsg "$msg"
    fi
 
 
 else
    echo; echo "No guess file found!"
    msg="NONfatal error from $job - No guess file found"
-   postmsg "$jlogfile" "$msg"
+   postmsg "$msg"
    exit
 fi

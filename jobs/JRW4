@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 set -xa
 date
@@ -26,7 +26,8 @@ export cycle=t${cyc}z
 # Specify NET and RUN Name and model
 ####################################
 export NET=${NET:-sfcship}
-export RUN=${RUN:-sfcship}      
+export RUN=${RUN:-sfcship}
+export krun=${krun:-4}
 
 ####################################
 # SENDCOM  - Copy Files From TMPDIR to $COMOUT
@@ -39,7 +40,7 @@ export SENDECF=${SENDECF:-YES}
 ####################################
 # File To Log Msgs
 ####################################
-export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
+#export jlogfile=${jlogfile:-${DATA}/jlogfile.${job}.${pid}}
 
 ####################################
 # Determine Job Output Name on System
@@ -65,7 +66,7 @@ setpdy.sh
 ##############################################
 # Define comout directory
 ##############################################
-export COMOUT=${COMOUT:-$(compath.py ${envir}/${NET}/${sfcship_ver}/${RUN}.$PDY})}
+export COMOUT=${COMOUT:-$(compath.py -o ${NET}/${sfcship_ver}/${RUN}.${PDY})}
 mkdir -p $COMOUT
 
 ##############################################

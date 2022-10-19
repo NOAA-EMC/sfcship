@@ -37,7 +37,7 @@ fi
 
 ###############################################
 msg='JOB COMPLETED NORMALLY'
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 ###############################################
 
 set +x

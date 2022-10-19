@@ -1,3 +1,4 @@
+#!/bin/bash
 ####################################################################
 # Name:  exrdshpmpc.sh          Author:  Chris Caruso
 # Abstract: This script dumps the marine data for +/- 3 hours from
@@ -43,7 +44,7 @@ MAPHR=$1
 
 set -xa
 msg="Script exrdshpmpc.sh starting."
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 
 ########################################
 #
@@ -86,6 +87,8 @@ OUTFILE=sfcship.${job}.${cyc}  # e.g. sfcship.jrw001.12
 #  QC software (e.g. could cause 1200Z data to be compared to a fcst
 #  valid at 1800Z!!!).
 #
+# testing canned data in para, don't exit
+#if test $envir = 'para'; then ZHOUR=$SYNOPHR; fi
 
 if test ${SYNOPHR} -ne '18'
 then
@@ -95,8 +98,8 @@ then
   then
     msg1="RUNNING IN NEW SYNOPTIC PERIOD - DO NOT DUMP DATA FOR"
     msg2="EARLIER SYNOPTIC PERIOD -- ABORTING script exrdshpmpc"
-    postmsg "$jlogfile" "$msg1"
-    postmsg "$jlogfile" "$msg2"
+    postmsg "$msg1"
+    postmsg "$msg2"
     exit  
   fi
 else
@@ -106,8 +109,8 @@ else
   then
     msg1="RUNNING IN NEW SYNOPTIC PERIOD - DO NOT DUMP DATA FOR"
     msg2="EARLIER SYNOPTIC PERIOD -- ABORTING script exrdshpmpc"
-    postmsg "$jlogfile" "$msg1"
-    postmsg "$jlogfile" "$msg2"
+    postmsg "$msg1"
+    postmsg "$msg2"
     exit  
   fi
 fi
@@ -133,23 +136,23 @@ do
       ix=`expr $ix + 1`
       count=`grep "$group  HAS" $TYPE.out | awk '{print $3}'`
       msg="Dumped ${count} $TYPE reports for ${PDY}${SYNOPHR}."
-      postmsg  "$jlogfile" "$msg"
+      postmsg  "$msg"
       if [ "$ix" -eq 1 ]
       then
         count=`grep "001.013  HAS" $TYPE.out | awk '{print $3}'`
         msg="Dumped ${count} $TYPE reports for ${PDY}${SYNOPHR}."
-        postmsg  "$jlogfile" "$msg"
+        postmsg  "$msg"
       fi
    else
       msg="No $TYPE data for ${PDY}${SYNOPHR}!"
-      postmsg  "$jlogfile" "$msg"
+      postmsg  "$msg"
    fi
 done
 
 if [ "$ix" -eq '0' ]
 then
    msg="ERROR NO DATA TO DUMP TO MPC FOR QC - ABORTING script exrdshpmpc"
-   postmsg "$jlogfile" "$msg"
+   postmsg "$msg"
    exit
 fi
 
@@ -170,7 +173,7 @@ export err=$?; err_chk
 if [ "$err" -ne 0 ]
 then
    msg7="NO SURFACE MARINE DATA WRITTEN FOR HP QC... error = $err"
-   postmsg "$jlogfile" "$msg7"
+   postmsg "$msg7"
 else
    if test "$SENDCOM" = 'YES'
    then
@@ -178,12 +181,12 @@ else
       cp sfcshp.dat $COMOUT/$OUTFILE
       if test "$SENDDBN" = 'YES'
       then
-         $DBNROOT/bin/dbn_alert QAP sfc_obs $job $COMOUT/$OUTFILE
+         $SIPHONROOT/bin/dbn_alert QAP sfc_obs $job $COMOUT/$OUTFILE
       fi
    fi 
 fi
 
 msg='Script exrdshpmpc.sh completed Normally.'
-postmsg "$jlogfile" "$msg"
+postmsg "$msg"
 
 # ---------------END OF EXRDSHPMPC SCRIPT ----------------------------

@@ -1,3 +1,4 @@
+#!/bin/bash
 ################################################################
 # Name:  marine_stats_eomqm.sh   Author:
 # Abstract:  This script adds current month's data qm's to buoy
@@ -59,7 +60,7 @@ cat $FIXhrly/buoy_header.txt $OUTFILE3 > $DATA/buoy.stats
    mv $DATA/buoy.stats $MARARCH/.
 
    if [ $SENDDBN = "YES" ] ; then
-       $DBNROOT/bin/dbn_alert TEXT BUOY_STATS $job $MARARCH/buoy.stats
+       $SIPHONROOT/bin/dbn_alert TEXT BUOY_STATS $job $MARARCH/buoy.stats
    fi
 
  fi
