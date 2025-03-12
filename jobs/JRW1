@@ -62,6 +62,7 @@ export USHgraph=$HOMEgraph/ush
 export USHhrly=$USHgraph
 export EXEChrly=$EXECgraph
 export FIXhrly=$FIXgraph
+export FIXweb=$FIXgraph
 
 ##############################
 # Run setpdy and initialize PDY variables
@@ -94,13 +95,13 @@ mkdir -p -m 775 $WEBmstats $MARARCH
 if [[ $envir != 'prod' || $PARATEST = 'YES' ]]; then
   #export REMOTEUSER=${REMOTEUSER:-"nwprod@ncointra.ncep.noaa.gov"}
   #export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/smstats)}
-  export DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/pmb/nwpara/qap"}
+  export DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/pmb/status/test/dataqc"}
 fi
 
 export SENDWEB=${SENDWEB:-YES}
 export REMOTEUSER=${REMOTEUSER:-"nwprod@ncorzdm.ncep.noaa.gov"}
 export SRC_DIR=${SRC_DIR:-$(compath.py ${envir}/com/${NET}/${sfcship_ver}/smstats)}
-export DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/pmb/qap"}
+export DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/omb/dataqc"}
 export LOGDIR=${LOGDIR:-"$COMROOT/logs"}
 
 
@@ -119,7 +120,7 @@ fi
 # Remove the Temporary working directory
 ##############################
 
-if [ "${KEEPDATA}"!=YES ]; then
+if [ "${KEEPDATA}" != "YES" ]; then
   rm -fr $DATA
 fi
 

@@ -10,4 +10,10 @@ export obsproc_ver=v1.2
 ##export PARATEST=YES
 #
 ## if SENDDBN=YES and PARATEST=NO, don't send to web prod space
-#export SENDWEB=NO
+#export COMPATH=/lfs/h1/ops/prod/com/gfs:/lfs/h1/ops/prod/com/obsproc
+#export KEEPDATA=YES
+#export PDY=20241201 # generate marine_archive/ and smstats/ outputs
+
+#export SENDWEB=YES
+#export DEST_DIR=/home/www/nco/htdocs/pmb/status/test/dataqc
+

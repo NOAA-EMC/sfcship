@@ -1,8 +1,121 @@
+Release Notes: sfcship.v1.2.0  Released to NCO on November 27, 2024
+
+. Migrate the SMStats website from legacy https://www.nco.ncep.noaa.gov/pmb/qap/smstats to
+  https://www.nco.ncep.noaa.gov/omb/dataqc/smstats.
+
+. Convert the website to the current NCO website php/css standards. 
+
+. Purpose: Provide reports for OPC
+
+. System requirements for build and run environments
+  --------------------------------------------------
+     module load envvar/1.0
+     module load PrgEnv-intel/8.1.0
+     module load craype/2.7.8
+     module load intel/19.1.3.304
+     module load cray-mpich/8.1.4
+
+. Files
+  -----
+M Release_Notes
+M jobs/JRW1
+  jobs/JRW2
+  jobs/JRW3
+  jobs/JRW4
+  jobs/JRW5
+  jobs/JSHIP_NAMES
+D parm/transfer_raws.list
+  parm/transfer_sfcship.list
+  r_job_wrapper/r_jrw1
+  r_job_wrapper/r_jrw2
+  r_job_wrapper/r_jrw3
+  r_job_wrapper/r_jrw4
+  r_job_wrapper/r_jrw5
+  scripts/exrw1.sh
+  scripts/exrw1.sh.org
+  scripts/exrw2.sh
+  scripts/exrw3.sh
+  scripts/exrw4.sh
+  scripts/exrw5.sh
+  scripts/exship_names.sh
+  sorc/build.scr
+  sorc/hrly_rdshpmpc.fd/makefile
+  sorc/hrly_rdshpmpc.fd/rdshpmpc.f
+  ush/mstr_shp_stn_lst_update.sh
+  ush/mstr_shp_stn_lst_update2.sh
+  util/sorc/build.log
+  util/sorc/build.scr
+  util/sorc/archqm.fd/archqm.f
+  util/sorc/archqm.fd/build.sh
+  util/sorc/archqm.fd/makefile
+  util/sorc/archqm.fd/makefile.org
+  util/sorc/datarch.fd/build.sh 
+  util/sorc/datarch.fd/datarch.f
+  util/sorc/datarch.fd/makefile
+  util/sorc/datarch.fd/makefile.org
+  util/sorc/marine_stats_eomqm.fd/build.sh
+  util/sorc/marine_stats_eomqm.fd/eomqm.f
+  util/sorc/marine_stats_eomqm.fd/makefile
+  util/sorc/marine_stats_eomqm.fd/makefile.org
+  util/sorc/marine_stats_genak.fd/build.sh
+  util/sorc/marine_stats_genak.fd/genak.f
+  util/sorc/marine_stats_genak.fd/makefile
+  util/sorc/marine_stats_genak.fd/makefile.org
+  util/sorc/marine_stats_genall.fd/build.sh
+  util/sorc/marine_stats_genall.fd/genall.f
+  util/sorc/marine_stats_genall.fd/makefile
+  util/sorc/marine_stats_genall.fd/makefile.org
+  util/sorc/marine_stats_geniss.fd/build.sh
+  util/sorc/marine_stats_geniss.fd/geniss.f
+  util/sorc/marine_stats_geniss.fd/makefile
+  util/sorc/marine_stats_geniss.fd/makefile.org
+  util/sorc/marine_stats_genstx.fd/genstx.f
+  util/sorc/marine_stats_genstx.fd/makefile
+  util/sorc/marine_stats_newstats.fd/build.sh
+  util/sorc/marine_stats_newstats.fd/makefile
+  util/sorc/marine_stats_newstats.fd/makefile.org
+  util/sorc/marine_stats_newstats.fd/newstats.f
+  util/sorc/marine_stats_rmslash.fd/makefile
+  util/sorc/marine_stats_rmslash.fd/rmslash.f
+  util/fix/buoy_hdr_oneline.txt
+  util/fix/buoy_header.txt
+A util/fix/index.ak.mon.php
+A util/fix/index.ak.php
+A util/fix/index.global.mon.php
+A util/fix/index.global.php
+A util/fix/index.iss.mon.php
+A util/fix/index.iss.php
+A util/fix/index.platnames.php
+A util/fix/index.readme.php
+  util/ush/exarchqm.sh
+  util/ush/exdatarch.sh
+  util/ush/exrdshpmpc.sh
+  util/ush/marine_genstats_akiss.sh
+  util/ush/marine_genstats_allstx.sh
+M util/ush/marine_main_run_stats.sh
+  util/ush/marine_stats_eomqm.sh
+  util/ush/marine_stats_getrep_ak.sh
+  util/ush/marine_stats_getrep_iss.sh
+  util/ush/marine_stats_sortarch.sh
+  util/ush/marine_stats_sortrunqm.sh
+M util/ush/marine_stats_sync_smstats.sh
+  versions/build.ver
+  versions/run.ver
+
+. Additional content in this release
+  ----------------------------------
+A comroot_v1.2_newsmstats --> Contains the full web content to be transitioned to the new ncorzdm:/home/www/nco/htdocs/omb/dataqc/smstats
+A pmbqap_redirects --> Contains all the redirect files that need to be copied into ncorzdm:/home/www/nco/htdocs/pmb/qap/smstats
+
+. Dependencies
+  ------------
+   gfs.v16.3
+   obsproc.v1.2
+
+---------------------------------------------------------------------------------------------------------------------
 Release Notes: sfcship.v1.1.0  Released to NCO on November 1, 2021
 
 . Transition from WCOSS ph3 to WCOSS2
-
-. Purpose: Provide reports for OPC
 
 . Checkout: git clone --branch release/sfcship.v1.1.0 https://github.com/noaa-emc/sfcship
 

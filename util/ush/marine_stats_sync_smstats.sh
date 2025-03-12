@@ -8,6 +8,8 @@ set -x
 # ----------------  -----------  ----------------------------------
 # Ricardo Romero    19-Jul-2002  Initial Version.
 # SPA SH            11-Dec-2019  Tranition to Dell
+# Kempisty          21-Nov-2024  Moved destination directory from
+# 				 .../pmb/qap to .../omb/dataqc
 #######################################
 
 #######################################
@@ -65,7 +67,7 @@ SRC_DIR=${SRC_DIR:-"$COMROOT/${NET}/prod/smstats"}
 # Destination directory.
 # 1) Replace "/my/destination/directory" with the destination directory
 #    you will be syncing to.
-DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/pmb/qap"}
+DEST_DIR=${DEST_DIR:-"/home/www/nco/htdocs/omb/dataqc"}
 
 # Specify the source and destination for syncing.
 

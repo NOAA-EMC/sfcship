@@ -33,6 +33,9 @@
 #
 # History: Aug. 2008 - First implementation of this script.
 #          Dec. 2019 - Migrate to Phase3.
+#          Nov. 2024 - Migrated the destination directory from .../pmb/qap
+#          	       to .../omb/dataqc and updated webpages to standard
+#          	       NCO php web format. 
 ####################################################################
 
 cd $DATA
@@ -84,7 +87,9 @@ if [ $1 -eq '01' ] ; then
 #
 
 mon_string='jan feb mar apr may jun jul aug sep oct nov dec'
+index_mon_title='Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'
 lmonth=`echo $mon_string | awk -v lmon=$prev_mon '{ print $lmon }'`
+lmonth_index=`echo $index_mon_title | awk -v lmon_index=$prev_mon '{ print $lmon_index }'`
 
 #
 # Create the directory for saving the marine stats for all months
@@ -105,7 +110,7 @@ lmonth=`echo $mon_string | awk -v lmon=$prev_mon '{ print $lmon }'`
           nlin_cnt=`expr $nlin_cnt + 1`
           read x
           pmon_str=`echo $x | awk '{print $2}' | cut -c5-6`
-
+	  
           if [ $pmon_str -eq $prev_mon ] ; then
              cnt_pmon=`expr $cnt_pmon + 1`
           else
@@ -203,12 +208,38 @@ fi
 	export err=$?; err_chk
 
 ######################################################################
+#   Update index.php file in each web upload location to current month
+######################################################################
+
+       cp $FIXweb/index.global.mon.php $DATA/index.global.php
+       sed -e "s/Mon YYYY/${lmonth_index} ${Year}/" $DATA/index.global.php > $DATA/temp_global_index1
+       sed -e "s/\.mon\./\.${lmonth}\./" $DATA/temp_global_index1 > $DATA/temp_global_index2
+       cp $DATA/temp_global_index2 $WEBmstats/global/${lmonth}/index.php
+       
+       cp $FIXweb/index.ak.mon.php $DATA/index.ak.php
+       sed -e "s/Mon YYYY/${lmonth_index} ${Year}/" $DATA/index.ak.php > ${DATA}/temp_ak_index1
+       sed -e "s/\.mon\./\.${lmonth}\./" ${DATA}/temp_ak_index1 > $DATA/temp_ak_index2
+       cp $DATA/temp_ak_index2 $WEBmstats/ak/${lmonth}/index.php
+       
+       cp $FIXweb/index.iss.mon.php $DATA/index.iss.php
+       sed -e "s/Mon YYYY/${lmonth_index} ${Year}/" $DATA/index.iss.php > $DATA/temp_iss_index1
+       sed -e "s/\.mon\./\.${lmonth}\./" $DATA/temp_iss_index1 > $DATA/temp_iss_index2
+       cp $DATA/temp_iss_index2 $WEBmstats/iss/${lmonth}/index.php
+
+       cd $WEBmstats/global
+       ln -sf ./${lmonth}/surf_mar.${lmonth}.stats.txt rptfile
+       cd $WEBmstats/ak
+       ln -sf ./${lmonth}/surf_mar.ak.${lmonth}.stats.txt rptfile
+       cd $WEBmstats/iss
+       ln -sf ./${lmonth}/surf_mar.iss.${lmonth}.stats.txt rptfile
+
+######################################################################
 #	Upload AK, ISS and global stats to rzdm
 #####################################################################
 
-       if [ $SENDWEB = 'YES' ]; then
-         sh $USHhrly/marine_stats_sync_smstats.sh
-       fi
+      if [ $SENDWEB = 'YES' ]; then
+	 sh $USHhrly/marine_stats_sync_smstats.sh
+      fi
 
 fi
 exit
