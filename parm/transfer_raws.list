@@ -23,18 +23,39 @@
 # directory are included, so if no exclude patterns match that file, it will be
 # transferred.
 
-com/hourly/_ENVIR_/qap._PDY_/
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDY_/
 B 540000
 E
 
-com/hourly/_ENVIR_/qap._PDYm1_/
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDYm1_/
 B 540000
 E
 
-#/gpfs/gp1/nco/ops/pcom/hourly/   /gpfs/tp1/nco/ops/pcom/hourly/
-/gpfs/gp1/nco/ops/pcom/hourly/  /gpfs/dell1/nco/ops/com/hourly/_ENVIR_/qap._PDY_/pcom/
-+ sfcship*
-- *
+_COMROOT_/sfcship/_SHORTVER_/smstats/
+B 540000
+E
+
+_COMROOT_/sfcship/_SHORTVER_/VOS/
+B 540000
+E
+
+_COMROOT_/sfcship/_SHORTVER_/marine_archive/
+B 540000
+E
+
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDYm2_/
+B 540000
+E
+
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDYm3_/
+B 540000
+E
+
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDYm4_/
+B 540000
+E
+
+_COMROOT_/sfcship/_SHORTVER_/sfcship._PDYm5_/
 B 540000
 E
 
