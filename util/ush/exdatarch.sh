@@ -176,8 +176,10 @@ then
   dumpdat=${datem1}
 fi
 
-SG06_grib2=${COMINgdas}.$dt06/${hrm6}/atmos/gdas.t${hrm6}z.pgrb2.1p00.f006
-SG06b_grib2=${COMINgfs}.$dt06/${hrm6}/atmos/gfs.t${hrm6}z.pgrb2.1p00.f006
+#SG06_grib2=${COMINgdas}.$dt06/${hrm6}/atmos/gdas.t${hrm6}z.pgrb2.1p00.f006
+SG06_grib2=${COMINgdas}.$dt06/${hrm6}/products/atmos/grib2/1p00/gdas.t${hrm6}z.pres_a.1p00.f006.grib2
+#SG06b_grib2=${COMINgfs}.$dt06/${hrm6}/atmos/gfs.t${hrm6}z.pgrb2.1p00.f006
+SG06b_grib2=${COMINgfs}.$dt06/${hrm6}/products/atmos/grib2/1p00/gfs.t${hrm6}z.pres_a.1p00.f006.grib2
 
 # create grib1 on pgb 
 # assign SG06 to newly generated grib1 file
