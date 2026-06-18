@@ -18,14 +18,6 @@ Release Notes: sfcship.v1.3.0  Released to NCO on June 22, 2026
 . Files
   -----
 M Release_Notes
-M util/fix/index.ak.mon.php
-M util/fix/index.ak.php
-M util/fix/index.global.mon.php
-M util/fix/index.global.php
-M util/fix/index.iss.mon.php
-M util/fix/index.iss.php
-M util/fix/index.platnames.php
-M util/fix/index.readme.php
 M util/ush/exdatarch.sh
 M versions/run.ver
 
