@@ -21,6 +21,9 @@ M Release_Notes
 M util/ush/exdatarch.sh
 M versions/run.ver
 
+. Additional content in this release
+  ----------------------------------
+
 versions/run.ver
 updated bufr_dump_ver=1.0.0 to bufr_dump_ver=1.3.1
 updated gfs_ver=v16.3 to gfs_ver=v17.0
@@ -30,11 +33,6 @@ Updated lines below to reflect changes for gfsv17.0:
 SG06_grib2=${COMINgdas}.$dt06/${hrm6}/products/atmos/grib2/1p00/gdas.t${hrm6}z.pres_a.1p00.f006.grib2
 SG06b_grib2=${COMINgfs}.$dt06/${hrm6}/products/atmos/grib2/1p00/gfs.t${hrm6}z.pres_a.1p00.f006.grib2
 
-
-. Additional content in this release
-  ----------------------------------
-A comroot_v1.2_newsmstats --> Contains the full web content to be transitioned to the new ncorzdm:/home/www/nco/htdocs/omb/dataqc/smstats
-A pmbqap_redirects --> Contains all the redirect files that need to be copied into ncorzdm:/home/www/nco/htdocs/pmb/qap/smstats
 
 . Dependencies
   ------------
