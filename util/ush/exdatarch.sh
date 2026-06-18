@@ -176,10 +176,18 @@ then
   dumpdat=${datem1}
 fi
 
-#SG06_grib2=${COMINgdas}.$dt06/${hrm6}/atmos/gdas.t${hrm6}z.pgrb2.1p00.f006
-SG06_grib2=${COMINgdas}.$dt06/${hrm6}/products/atmos/grib2/1p00/gdas.t${hrm6}z.pres_a.1p00.f006.grib2
-#SG06b_grib2=${COMINgfs}.$dt06/${hrm6}/atmos/gfs.t${hrm6}z.pgrb2.1p00.f006
-SG06b_grib2=${COMINgfs}.$dt06/${hrm6}/products/atmos/grib2/1p00/gfs.t${hrm6}z.pres_a.1p00.f006.grib2
+gfs_ver_num="${gfs_ver#v}"
+gfs_ver_num="${gfs_ver_num%%.*}"
+echo "gfs_ver_num is: $gfs_ver_num"
+
+if [[ "$gfs_ver_num" -le 16 ]]; then
+	SG06_grib2=${COMINgdas}.$dt06/${hrm6}/atmos/gdas.t${hrm6}z.pgrb2.1p00.f006
+        SG06b_grib2=${COMINgfs}.$dt06/${hrm6}/atmos/gfs.t${hrm6}z.pgrb2.1p00.f006
+
+else 
+	SG06_grib2=${COMINgdas}.$dt06/${hrm6}/products/atmos/grib2/1p00/gdas.t${hrm6}z.pres_a.1p00.f006.grib2
+	SG06b_grib2=${COMINgfs}.$dt06/${hrm6}/products/atmos/grib2/1p00/gfs.t${hrm6}z.pres_a.1p00.f006.grib2
+fi
 
 # create grib1 on pgb 
 # assign SG06 to newly generated grib1 file

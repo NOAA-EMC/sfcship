@@ -3,7 +3,7 @@ export libjpeg_ver=9c
 export grib_util_ver=1.2.3
 export bufr_dump_ver=1.3.1
 
-export gfs_ver=v16.3
+export gfs_ver=v17.0
 export obsproc_ver=v1.2
 
 ## Keep PARATEST in place until we go live
