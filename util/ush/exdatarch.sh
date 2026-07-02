@@ -185,8 +185,14 @@ if [[ "$gfs_ver_num" -le 16 ]]; then
         SG06b_grib2=${COMINgfs}.$dt06/${hrm6}/atmos/gfs.t${hrm6}z.pgrb2.1p00.f006
 
 else 
-	SG06_grib2=${COMINgdas}.$dt06/${hrm6}/products/atmos/grib2/1p00/gdas.t${hrm6}z.pres_a.1p00.f006.grib2
-	SG06b_grib2=${COMINgfs}.$dt06/${hrm6}/products/atmos/grib2/1p00/gfs.t${hrm6}z.pres_a.1p00.f006.grib2
+	cp ${COMINgdas}.$dt06/${hrm6}/products/atmos/grib2/0p25/gdas.t${hrm6}z.pres_a.0p25.f006.grib2 $DATA
+	cp ${COMINgfs}.$dt06/${hrm6}/products/atmos/grib2/0p25/gfs.t${hrm6}z.pres_a.0p25.f006.grib2 $DATA
+	# regrid 0p25 to 1p00 grib2
+	# output writes to $DATA/g*s.t${hrm6}z.pres_a.0p25.f006.grib2_1p0
+	$HOMEsfcship/util/ush/gfsregrid.sh $DATA/gdas.t${hrm6}z.pres_a.0p25.f006.grib2 1.0
+	$HOMEsfcship/util/ush/gfsregrid.sh $DATA/gfs.t${hrm6}z.pres_a.0p25.f006.grib2 1.0
+	SG06_grib2=$DATA/gdas.t${hrm6}z.pres_a.0p25.f006.grib2_1p0
+	SG06b_grib2=$DATA/gfs.t${hrm6}z.pres_a.0p25.f006.grib2_1p0
 fi
 
 # create grib1 on pgb 
