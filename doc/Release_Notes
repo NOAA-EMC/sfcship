@@ -1,9 +1,6 @@
 Release Notes: sfcship.v1.3.0  Released to NCO on June 22, 2026
 
-. Migrate the SMStats website from legacy https://www.nco.ncep.noaa.gov/pmb/qap/smstats to
-  https://www.nco.ncep.noaa.gov/omb/dataqc/smstats.
-
-. Convert the website to the current NCO website php/css standards.
+. Updates to read in GFSv17 grib2 files. 
 
 . Purpose: Provide reports for OPC
 
@@ -19,6 +16,7 @@ Release Notes: sfcship.v1.3.0  Released to NCO on June 22, 2026
   -----
 M Release_Notes
 M util/ush/exdatarch.sh
+A util/ush/gfsregrid.sh
 M versions/run.ver
 
 . Additional content in this release
@@ -27,11 +25,15 @@ M versions/run.ver
 versions/run.ver
 updated bufr_dump_ver=1.0.0 to bufr_dump_ver=1.3.1
 updated gfs_ver=v16.3 to gfs_ver=v17.0
+updated grib_tuil_ver=1.2.3 to grib_util_ver=1.2.4
 
 util/ush/exdatarch.sh
-Updated lines below to reflect changes for gfsv17.0:
-SG06_grib2=${COMINgdas}.$dt06/${hrm6}/products/atmos/grib2/1p00/gdas.t${hrm6}z.pres_a.1p00.f006.grib2
-SG06b_grib2=${COMINgfs}.$dt06/${hrm6}/products/atmos/grib2/1p00/gfs.t${hrm6}z.pres_a.1p00.f006.grib2
+Updated to read in GFSv17 grib2 files
+
+util/ush/gfsregrid.sh
+New file to regrid 0p25 grib data to 1p00 grib data
+
+Memory for the JRW1 job needs to be increased. In experimental runs it was increased from 1GB to 2GB.
 
 
 . Dependencies
