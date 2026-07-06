@@ -25,7 +25,7 @@ M versions/run.ver
 versions/run.ver
 updated bufr_dump_ver=1.0.0 to bufr_dump_ver=1.3.1
 updated gfs_ver=v16.3 to gfs_ver=v17.0
-updated grib_tuil_ver=1.2.3 to grib_util_ver=1.2.4
+updated grib_util_ver=1.2.3 to grib_util_ver=1.2.4
 
 util/ush/exdatarch.sh
 Updated to read in GFSv17 grib2 files
