@@ -33,7 +33,7 @@ Updated to read in GFSv17 grib2 files
 util/ush/gfsregrid.sh
 New file to regrid 0p25 grib data to 1p00 grib data
 
-Memory for the JRW1 job needs to be increased. In experimental runs it was increased from 1GB to 2GB.
+Memory for the JRW1 job may need to be increased. In experimental runs it was increased from 1GB to 2GB.
 
 
 . Dependencies
